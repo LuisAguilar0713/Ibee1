@@ -41,14 +41,31 @@ export const HistoriaClinica = () => {
                         </div>
                             <img src={flecha} alt="" />
                     </a>
+                    
                     <a href={`/historiaclinica/${pacienteId}/2`}>
+                        <div>
+                            <img src={antePerPat} alt="" />
+                            <p>Antecedentes Patologicos Hereditarios</p>
+                        </div>
+                            <img src={flecha} alt="" />
+                    </a>
+
+                    <a href={`/historiaclinica/${pacienteId}/3`}>
+                        <div>
+                            <img src={antePerPat} alt="" />
+                            <p>Antecedentes Personales No Patologicos</p>
+                        </div>
+                            <img src={flecha} alt="" />
+                    </a>
+
+                    <a href={`/historiaclinica/${pacienteId}/4`}>
                         <div>
                             <img src={exploracion} alt="" />
                             <p>Exploración de Cabeza y Cuello</p>
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/3`}>
+                    <a href={`/historiaclinica/${pacienteId}/9`}>
                         <div>
                             <img src={odonto} alt="" />
                             <p>Odontograma Diagnóstico</p>
