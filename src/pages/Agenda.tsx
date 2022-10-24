@@ -1,6 +1,6 @@
 import { IonContent, IonDatetime, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import consultorio from './../assets/img/consultorioRosa.svg'
+import consultorio from './../assets/img/consultorioAzul.svg'
 import './Agenda.css'
 import flecha from './../assets/img/arrow-derecha.png'
 import plus from './../assets/img/plus-circle.svg'

@@ -10,6 +10,7 @@
     position: relative;
 }
 
+
 @media only screen and (min-width: 768px){
     .miAgenda .contenido{
         width: 70%;
@@ -20,7 +21,7 @@
     .miAgenda .contenido{
         width: 60%;
         text-align: start;
-    }
+ }
 }
 .miAgenda .contenido .head{
     position: relative;
@@ -80,7 +81,7 @@
 .miAgenda .contenido .informe .noticia .cambiar{
     border: solid 2px white;
     padding: 7px;
-    margin-left: 10px;
+    margin-left: 24px;
     border-radius: 100%;
     text-align: center;
     display: flex;
@@ -93,6 +94,7 @@
     width: 1.2rem;
     filter: var(--blancoImg);
 }
+
 @media only screen and (min-width: 768px){
     .miAgenda .contenido .informe .dia p{
         font-size: 2.5rem;
@@ -100,7 +102,7 @@
         margin: .5rem 0 0 0;
     }
     .miAgenda .contenido .informe .noticia{
-        width: 50%;
+        width: 100%;
         min-width: 400px;
         justify-content: center;
         margin: 0 auto;
@@ -108,6 +110,8 @@
     .miAgenda .contenido .informe .dia{
         text-align: center;
     }
+
+
 }
 .miAgenda .contenido .informe .noticia p:first-child{
     font-size: 80px;
@@ -133,18 +137,20 @@
 }
 .miAgenda .contenido a{
     text-decoration: none;
-    color: var(--negroOpaco);
+    color: black;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
 }
 .miAgenda .contenido a:hover .consultorio{
-    background-color: var(--azulFuerte);
-    color: white;
+    background-color: #eff0f1;
+    color: black;
 }
 
 .miAgenda .contenido .consultorio{
     width: 100%;
     height: 3.5rem;
-    background-color: var(--azulClaro);
+    background-color:#DDEEEF;
     border-radius: 8px;
     display: flex;
     justify-content: space-around;
@@ -179,6 +185,7 @@
         height: 3.5rem;
     }
 }
+
 ion-item{    
     --width: 10px;
     --padding: 0;
@@ -202,15 +209,46 @@ ion-app > ion-router-outlet > div > ion-content > div > div.miAgenda > div > div
 }
 .clima-container{
     position: relative;
+    margin-left: 66px;
 }
 .clima-info{
     position: relative;
     z-index: 1;
+    margin-left: 10px;
 }
 .img-clima{
     position: absolute;
     z-index: 0;
     top: -5.3rem;
-    right: 0px;
+    right: 56px;
     max-width: 10rem;
+}
+
+
+@media only screen and (max-width: 375px){
+    .miAgenda .contenido .informe .noticia p:first-child {
+        font-size: 60px;
+        font-weight: bold;
+        margin: 0 1rem 0rem 0;
+    }
+    .miAgenda .contenido .informe .dia p {
+        font-size: 1.8rem;
+        margin: 1rem 0 0 7rem;
+    }
+    .clima-info{
+        position: relative;
+        z-index: 1;
+        margin-left: -80px;
+    }
+    .img-clima{
+        position: absolute;
+        z-index: 0;
+        top: -5.3rem;
+        right: 15px;
+        max-width: 10rem;
+    }
+    ion-item p {
+        margin-left: -82px;
+        color: white;
+    }
 }
