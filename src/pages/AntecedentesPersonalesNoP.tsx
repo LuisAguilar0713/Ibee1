@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import "./AntecedentesPersonalesNoP.css"
+import {ArrowLeftIcon} from '@primer/octicons-react';
+import { useParams } from 'react-router';
 
 export const AntecedentesPersonalesNoP = () => {
-
+    const params: any = useParams()
     const [mostrar, setmostrar] = useState({
         transmisionSex: false,
         esquema: false
@@ -11,9 +13,10 @@ export const AntecedentesPersonalesNoP = () => {
     const maneSubmit = (e: any) => {
         e.preventDefault()
     }
-
+    const pacienteId  = params.pacienteId 
     return (
         <>
+            <a href={`/HistoriaClinica/${pacienteId}`} className="arrows" ><ArrowLeftIcon size={40} /></a>
             <div className="contenedorAntecedentesPersonalesNoP">
                 <h1>Antecedentes Personales No Patológicos</h1>
                 <form onSubmit={

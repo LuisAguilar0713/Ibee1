@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import { Layout } from '../components/layout/Layout'
 import { config } from '../env';
+import {ArrowLeftIcon} from '@primer/octicons-react';
 import "./ExploracionCabezaCuello.css";
 
 export const ExploracionCabezaCuello = () => {
@@ -60,9 +61,10 @@ export const ExploracionCabezaCuello = () => {
     const handleSubmit = (e: any) => {
         e.preventDefault()
     }
-
+    const pacienteId  = params.pacienteId 
     return (
         <>
+            <a href={`/HistoriaClinica/${pacienteId}`} className="arrows"><ArrowLeftIcon size={40} /></a>
             <div className="contenedorExploracionCabezaCuello">
                 <h1>Exploración de cabeza y cuello</h1>
 

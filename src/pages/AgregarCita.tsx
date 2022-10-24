@@ -105,7 +105,7 @@ const AgregarCitas: React.FC = () => {
   return (
     <>
       <>
-        <>
+        <>               
           <head>
           <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"></link>
           </head>
