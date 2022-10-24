@@ -62,7 +62,7 @@ export const FichaIndentificacion = () => {
 	}
     return (
         <>
-            <a href={`/HistoriaClinica/${pacienteId}`} ><ArrowLeftIcon size={30} /></a>
+            <a href={`/HistoriaClinica/${pacienteId}`} className="arrows" ><ArrowLeftIcon size={40} /></a>
             <div className="contenedorFicha">
                 <h1>Ficha de identificación</h1>
                 <form className="nombre">

@@ -141,6 +141,7 @@
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
+    width: 197px;
 }
 .miAgenda .contenido a:hover .consultorio{
     background-color: #eff0f1;
@@ -224,6 +225,7 @@ ion-app > ion-router-outlet > div > ion-content > div > div.miAgenda > div > div
     max-width: 10rem;
 }
 
+<<<<<<< HEAD
 
 @media only screen and (max-width: 375px){
     .miAgenda .contenido .informe .noticia p:first-child {
@@ -252,3 +254,167 @@ ion-app > ion-router-outlet > div > ion-content > div > div.miAgenda > div > div
         color: white;
     }
 }
+=======
+ul, li{
+    list-style: none;
+    padding-bottom: 10px;
+  }
+
+ .concit{
+  padding: 0px;
+  z-index: 301;
+  border-radius: 7px;
+  padding-top: 20px;
+  
+  padding-right: 50px;
+  background-color: transparent;
+ }
+
+  .cit li a{
+    background-color: transparent;
+    color:var(--azulFuerte);
+    text-decoration: none;
+    margin-left: 1200px;
+    display: flex;
+    justify-content: start;
+  }
+  
+  .cit > li{
+    left: 100px;
+  }
+
+  .cit li ul{
+    display: none;
+    position: absolute;
+    min-height: 140px;
+    background: transparent;
+  }
+  
+  .cit li:hover >ul{
+    display: block;
+    right: -300px;
+  }
+  @media only screen and (max-width: 320px) {
+    .cit li:hover >ul{
+        display: block;
+        right: -56px;
+      }
+      .cit li a{
+        background-color: transparent;
+        color:var(--azulFuerte);
+        text-decoration: none;
+        margin-left: 185px;
+        display: flex;
+        justify-content: start;
+      }
+      .concit{
+        padding: 0px;
+        z-index: 301;
+        border-radius: 7px;
+        padding-top: 20px;
+        width: 465px;
+        padding-right: 13px;
+        background-color: var(--azulMedio);
+        box-shadow: 4px 4px 11px 0px rgb(0 0 0 / 47%);
+      }
+      .cit li ul {
+        display: none;
+        position: absolute;
+        min-height: 120px;
+        background: var(--azulMedio);
+    }
+    .miAgenda .contenido .agregar{
+        position: absolute;
+        display: flex;
+        margin-top: 1rem;
+        top: 0;
+        right: 0;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        left: 127px;
+    }
+  }
+  @media only screen and (min-width: 321px) and (max-width:500px) {
+    .miAgenda .contenido .agregar{
+        position: absolute;
+        display: flex;
+        margin-top: 1rem;
+        top: 0;
+        right: 0;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        left: 190px;
+    }
+    .cit li:hover >ul{
+        display: block;
+        right: -30px;
+      }
+      .cit li a{
+        background-color: transparent;
+        color:var(--azulFuerte);
+        text-decoration: none;
+        margin-left: 280px;
+        display: flex;
+        justify-content: start;
+      }
+      .concit{
+        padding: 0px;
+        z-index: 301;
+        border-radius: 7px;
+        padding-top: 20px;
+        width: 465px;
+        padding-right: 13px;
+        background-color: var(--azulMedio);
+        box-shadow: 4px 4px 11px 0px rgb(0 0 0 / 47%);
+      }
+      .cit li ul {
+        display: none;
+        position: absolute;
+        min-height: 120px;
+        background: var(--azulMedio);
+    }
+}
+@media only screen and (min-width: 510px) and (max-width:760px) {
+    .miAgenda .contenido .agregar{
+        position: absolute;
+        display: flex;
+        margin-top: 1rem;
+        top: 0;
+        right: 0;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        left: 280px;
+    }
+    .cit li:hover >ul{
+        display: block;
+        right: 5px;
+      }
+      .cit li a{
+        background-color: transparent;
+        color:var(--azulFuerte);
+        text-decoration: none;
+        margin-left: 300px;
+        display: flex;
+        justify-content: start;
+      }
+      .concit{
+        padding: 0px;
+        z-index: 301;
+        border-radius: 7px;
+        padding-top: 20px;
+        width: 465px;
+        padding-right: 13px;
+        background-color: var(--azulMedio);
+        box-shadow: 4px 4px 11px 0px rgb(0 0 0 / 47%);
+      }
+      .cit li ul {
+        display: none;
+        position: absolute;
+        min-height: 120px;
+        background: var(--azulMedio);
+    }
+}
+>>>>>>> dd134621ef4364d211bfd4b114045946b84b2419

@@ -1,7 +1,12 @@
 import React from 'react'
 import { Layout } from '../components/layout/Layout'
 import './InterrogatorioAparatosSistemas.css';
+
 export const IterrogatorioPorAparatosYSistemas = () => {
+
+
+
+
     return (
         <Layout>
             <div className="container">

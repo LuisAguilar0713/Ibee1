@@ -1,3 +1,9 @@
+.arrows{
+    margin-bottom: 600px;
+    margin-left: 30px;
+    font-weight: bolder;
+    color: var(--azulFuerte);
+}
 .contenedorInterrogatorioAparatosSistemas {
     width: 90%;
     margin: 0 auto;

@@ -13,6 +13,7 @@ import { IonModal } from '@ionic/react'
 import {TwitterPicker,BlockPicker} from 'react-color'
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
+import {TriangleLeftIcon} from '@primer/octicons-react';
 
 
 const Agenda: React.FC = () => {
@@ -99,9 +100,11 @@ const Agenda: React.FC = () => {
         }
     }
     return (
+        
         <IonPage>
             <IonContent fullscreen>
                 <Layout>
+            
                     <div className="miAgenda">
                         <div className="contenido">
                             <div className="head">
@@ -112,6 +115,30 @@ const Agenda: React.FC = () => {
                                     </button>
                                     <p>Agregar</p>
                                 </a>
+                            </div>
+                            <div className='citas_dia'>
+                            <ul className='cit'>
+
+                              <li className='trianguloA'> <a><TriangleLeftIcon size={30} /></a>
+
+                                <ul className='concit'>
+
+                                    < li> {
+                                    consultorios.map(c => (
+                                        <a>
+                                            <div className="consultorio">
+                                                <p>Consultorio {c.id_consultorio}</p>
+                                               
+                                            </div>
+                                        </a>
+                                    ))
+                                    } 
+                                    
+                                    </li>
+                                </ul>
+                             </li>
+
+                            </ul>
                             </div>
                             <div className="informe">
                                 <div className="dia">
@@ -130,7 +157,7 @@ const Agenda: React.FC = () => {
                                             clima && (
                                                 <div className="clima-container">
                                                     <div className="clima-info">
-                                                        Clima: <strong>{ (clima.main.temp - 273.15).toFixed(2) } Cº</strong>
+                                                        Clima: <strong> { (clima.main.temp - 273.15).toFixed(2) } Cº</strong>
                                                         <span>
                                                             - { clima.weather[0].description }
                                                         </span>
