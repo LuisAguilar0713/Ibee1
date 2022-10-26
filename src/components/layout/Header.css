@@ -40,4 +40,5 @@
   .nav li:hover >ul{
     display: block;
     right: -28px;
+    
   }

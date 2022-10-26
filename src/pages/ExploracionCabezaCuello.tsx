@@ -344,7 +344,7 @@ export const ExploracionCabezaCuello = () => {
                             type="button"
                         >No</button>
                     </div>
-                    <p>Dificultal para abrir la boca</p>
+                    <p>Dificultad para abrir la boca</p>
                     <div className="bloque">
                         <button
                             type="button"
