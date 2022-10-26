@@ -35,6 +35,7 @@ import { Citas } from './pages/Citas';
 import { CustomAgenda } from './components/customAgenda/CustomAgenda';
 import { Agendax } from './pages/Agendax';
 import { Semanas } from './pages/Semanas';
+import { laboratorio }from './pages/laboratorio';
 import { HistoriaClinica } from './pages/HistoriaClinica';
 import { FichaIndentificacion } from './pages/FichaIndentificacion';
 import { AntecedentesPatologicos } from './pages/AntecedentesPatologicos';
@@ -113,6 +114,8 @@ const App: React.FC = () => (
           path="/citas/:consultorio/:fecha"
           component={Cita}
         />
+        
+
 
         <PrivateRoute
           exact
@@ -124,6 +127,12 @@ const App: React.FC = () => (
           exact
           path="/estadocuenta"
           component={EstadoCuenta}
+        />
+        
+        <PrivateRoute
+          exact
+          path="/laboratorio"
+          component={laboratorio}
         />
 
         <PrivateRoute

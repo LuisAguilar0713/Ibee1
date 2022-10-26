@@ -3,6 +3,7 @@ import React from 'react'
 import { Layout } from '../components/layout/Layout'
 import iconArrow from './../assets/img/arrow-derecha.png'
 import iconAbonos from './../assets/img/moneyEC.png'
+import laboratorio from './../assets/img/laboratorio_30.png'
 import './Mas.css'
 export const Mas = () => {
 
@@ -22,7 +23,13 @@ export const Mas = () => {
                 <img src={iconArrow} alt="" />
                 </a>
             </div>
-                
+            <div className="bloque1">
+                <a href="/laboratorio" className="contenidoBloque2">
+                <img src={laboratorio} alt="" />
+                <p>Laboratorio</p>
+                <img src={iconArrow} alt="" />
+                </a>
+            </div>
             </div>
         </Layout>
     )

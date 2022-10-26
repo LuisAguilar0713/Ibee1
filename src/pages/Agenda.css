@@ -225,7 +225,6 @@ ion-app > ion-router-outlet > div > ion-content > div > div.miAgenda > div > div
     max-width: 10rem;
 }
 
-<<<<<<< HEAD
 
 @media only screen and (max-width: 375px){
     .miAgenda .contenido .informe .noticia p:first-child {
@@ -254,7 +253,6 @@ ion-app > ion-router-outlet > div > ion-content > div > div.miAgenda > div > div
         color: white;
     }
 }
-=======
 ul, li{
     list-style: none;
     padding-bottom: 10px;
@@ -417,4 +415,3 @@ ul, li{
         background: var(--azulMedio);
     }
 }
->>>>>>> dd134621ef4364d211bfd4b114045946b84b2419
