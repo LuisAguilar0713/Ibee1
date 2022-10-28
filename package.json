@@ -2,7 +2,6 @@
   "name": "Ibee1",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://implants-bionic.com/sistemaibee",
   "dependencies": {
     "@capacitor/android": "3.2.4",
     "@capacitor/app": "1.0.3",
