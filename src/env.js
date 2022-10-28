@@ -1,6 +1,6 @@
 export const config = {
    //baseUrl: 'http://52.8.137.169:8081'
-   baseUrl: 'http://localhost:8081',
+   baseUrl: 'https://ibee1.herokuapp.com/',
    // baseUrl: 'https://ibeeapi.daniel21.xyz',
    // baseUrl: 'https://api.paralel.me',
    //baseUrlImagenes: 'http://localhost/Ibee/view/pacientes/foto'
