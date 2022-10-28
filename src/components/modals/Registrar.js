@@ -104,8 +104,6 @@ const crear = async () => {
 				</button>
 			</div>
 
-			
-		
 			<form className="form-container1">
                     <div className='b'>
 					<input 
