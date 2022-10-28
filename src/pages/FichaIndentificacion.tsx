@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router';
 import { config } from '../env';
 import "./FichaIdentificacion.css";
+import {ArrowLeftIcon} from '@primer/octicons-react';
 
 export const FichaIndentificacion = () => {
 
@@ -45,7 +46,7 @@ export const FichaIndentificacion = () => {
 
     const location = useLocation();
     const { pathname } = location;
-
+    const pacienteId  = params.pacienteId 
     const getpersona = async() =>{
 
         const res = await fetch(`${config.baseUrl}/api/fichaDeIdentificacion2/${ params.pacienteId }`,{
@@ -110,6 +111,7 @@ export const FichaIndentificacion = () => {
 	}
     return (
         <>
+        <a href={`/HistoriaClinica/${pacienteId}`} className="arrows" ><ArrowLeftIcon size={40} /></a>
             <div className="contenedorFicha">
                 <h1>Ficha de identificación</h1>
                 <form onSubmit={handleSubmit}>

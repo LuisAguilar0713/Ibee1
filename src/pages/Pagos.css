@@ -177,10 +177,6 @@ input:hover{
     background: var(--azulFuerte);
 }
 
-.contenedorPagos .infoEconomica .tabla table tr {
-   
-}
-
 @media only screen and (max-width: 768px) {
     .contenedorPagos .infoEconomica .tabla table {
         width: calc(90vw - 15px);

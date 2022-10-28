@@ -50,7 +50,8 @@ import { CalendarioSemana } from './pages/CelndarioSemana';
 import { Toaster } from 'react-hot-toast'
 import { PrivateRoute } from './routes/PrivateRoute';
 import { Mas } from './pages/Mas';
-
+import { MisTratamientos } from './pages/MisTratamientos';
+import { MisEstudios } from './pages/MisEstudios';
 const App: React.FC = () => (
   <IonApp>
     <div><Toaster /></div>
@@ -108,6 +109,18 @@ const App: React.FC = () => (
           path="/paciente/:id"
           component={Paciente}
         />
+        
+        <PrivateRoute
+          exact
+          path="/MisTratamientos"
+          component={MisTratamientos}
+        />
+         <PrivateRoute
+          exact
+          path="/MisEstudios"
+          component={MisEstudios}
+        />
+
 
         <PrivateRoute
           exact
