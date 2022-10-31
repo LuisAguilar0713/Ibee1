@@ -18,7 +18,8 @@ import {TriangleLeftIcon} from '@primer/octicons-react';
 
 
 const Agenda: React.FC = () => {
-    
+
+  
     const pacientesStorage = localStorage.getItem('agenda')
     const [fecha, setFecha] = useState(sanitizeFecha(new Date()));
     const [consultorios, setConsultorios] = useState<any[]>([])
@@ -27,16 +28,26 @@ const Agenda: React.FC = () => {
     const [clima, setClima] = useState<any>(null);
     const [showModal, setShowModal] = useState(true)
     const [precioDolar, setPrecioDolar] = useState<any>(null)
+    const [values, setValues] = useState({
+        nom_consultorio:'consultorio',
+        nombre_c:'',
+        ap_paterno:'',
+        ap_materno:'', 
+    
+    });
 
     const getNumeroCitas = async() => {
         try {
             const {data} = await axios.get(`${config.baseUrl}/api/citas/n?fromDate=${fecha}`);
             setConsultorios(data.consultorios)
             setNumeroCitas(data.totalCitas)
+            setValues(data)
         } catch (error) {
             console.log( error );
         }
     }
+   
+    
     
     const getFecha = () => {
         console.log(fecha.toLocaleString());
@@ -74,10 +85,6 @@ const Agenda: React.FC = () => {
         setClima( data )
     }
 
-    const [values] = useState({
-		nom_consultorio: 'Consultorio',
-        
-	})
 
     const crear = async () => {
 
@@ -193,9 +200,14 @@ const Agenda: React.FC = () => {
                                                 </div>
                                                 <img src={flecha} alt="" />
                                             </div>
+                                           
                                         </a>
+                                    
                                     ))
+                                    
                                 }
+
+                            
                             </div>
                         </div>
                     </div>
@@ -206,3 +218,7 @@ const Agenda: React.FC = () => {
 };
 
 export default Agenda;
+
+function setShowToast(arg0: boolean) {
+    throw new Error('Function not implemented.');
+}
