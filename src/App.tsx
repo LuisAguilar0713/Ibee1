@@ -50,8 +50,7 @@ import { CalendarioSemana } from './pages/CelndarioSemana';
 import { Toaster } from 'react-hot-toast'
 import { PrivateRoute } from './routes/PrivateRoute';
 import { Mas } from './pages/Mas';
-import PaymentForms from './pages/PaymentForms';
-import btnpagar from './pages/btnpagar';
+
 import { checkmarkOutline } from 'ionicons/icons';
 
 
@@ -207,16 +206,6 @@ const App: React.FC = () => (
           exact
           path="/mas"
           component={Mas}
-        />
-        <PrivateRoute
-          exact
-          path="/PaymentForms"
-          component={PaymentForms}
-        />
-                <PrivateRoute
-          exact
-          path="/btnpagar"
-          component={btnpagar}
         />
 
 
