@@ -4,10 +4,66 @@
     text-align: center;
 }
 
+.bloqueCuatro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.bloqueCuatro div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.bloqueCuatro div label{
+    font-weight: 500;
+}
+.bloqueCuatro div .btnRadio{
+    width: 15px;
+}
+
+.margen{
+    margin-right: 2rem;
+}
+
+.margen2{
+    margin-left: 2rem;
+}
+
 .form-container2{
     padding: 2rem;
     text-align: center;
+}
 
+.folioidfolio{
+    display: flex;
+    flex-direction: column;
+}
+
+.idFolio{
+    height: 2.5rem;
+    width: 4.5rem;
+    border-color: darkorange;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #d57500;
+}
+
+.folio{
+    margin-right: 25px;
+    display: flex;
+    background-color: #d57500;
+    color: white;
+    height: 2rem;
+    width: 4.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logoFolio{
+    display: flex   ;
 }
 
 .AgregarCons{
@@ -16,6 +72,13 @@
     font-weight: bold;
 }
 
+.logoDTD {
+    height: 20rem;
+    width: 20rem;
+    background-image: url(../../assets/img/Logodtd.jpeg);
+    background-size: cover;
+    margin: auto;
+}
 
 .form-container2 input{
     width: 70%; 
@@ -27,9 +90,16 @@
     border-radius: 10px;
 }
 
-.form-container label{
-    width: 22%;
-    margin-right: 5px;
+.form-container .text {
+    display: block;
+    font-size: 1rem;
+    text-align: start;
+    margin-left: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    width: 35%;
+    color: coral;
 }
 
 .form-container input{
@@ -84,7 +154,7 @@
     position: relative;
 }
 
- h1{
+h1{
     text-align: center;
     color: var(--azulFuerte);
     font-weight: bold;

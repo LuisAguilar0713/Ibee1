@@ -35,7 +35,7 @@ import { Citas } from './pages/Citas';
 import { CustomAgenda } from './components/customAgenda/CustomAgenda';
 import { Agendax } from './pages/Agendax';
 import { Semanas } from './pages/Semanas';
-import { laboratorio }from './pages/laboratorio';
+import { Laboratorio }from './pages/Laboratorio';
 import { HistoriaClinica } from './pages/HistoriaClinica';
 import { FichaIndentificacion } from './pages/FichaIndentificacion';
 import { AntecedentesPatologicos } from './pages/AntecedentesPatologicos';
@@ -50,8 +50,15 @@ import { CalendarioSemana } from './pages/CelndarioSemana';
 import { Toaster } from 'react-hot-toast'
 import { PrivateRoute } from './routes/PrivateRoute';
 import { Mas } from './pages/Mas';
+<<<<<<< HEAD
 import { MisTratamientos } from './pages/MisTratamientos';
 import { MisEstudios } from './pages/MisEstudios';
+=======
+
+import { checkmarkOutline } from 'ionicons/icons';
+
+
+>>>>>>> 72e267f215adfe89ef290ee08f859e05e7cba293
 const App: React.FC = () => (
   <IonApp>
     <div><Toaster /></div>
@@ -127,8 +134,6 @@ const App: React.FC = () => (
           path="/citas/:consultorio/:fecha"
           component={Cita}
         />
-        
-
 
         <PrivateRoute
           exact
@@ -144,8 +149,8 @@ const App: React.FC = () => (
         
         <PrivateRoute
           exact
-          path="/laboratorio"
-          component={laboratorio}
+          path="/Laboratorio"
+          component={Laboratorio}
         />
 
         <PrivateRoute
@@ -219,6 +224,8 @@ const App: React.FC = () => (
           path="/mas"
           component={Mas}
         />
+
+
 
       </IonRouterOutlet>
     </IonReactRouter>

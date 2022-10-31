@@ -22,7 +22,7 @@ export const EstadoCuenta = () => {
                                 <div>
                                     <img src={iconMoneda} alt="" />
                                     <p>$5,000</p>
-                                    <p>Total a pagar</p>
+                                    <p><a href="/btnpagar">Total a pagar</a></p>
                                 </div>
                             </div>
                             <div className="slogan">
@@ -32,7 +32,7 @@ export const EstadoCuenta = () => {
                             <div className="bloque">
                                 <a href="/Abonos" className="contenidoBloque">
                                     <img src={iconAbonos} alt="" />
-                                    <p>Mis Abonos</p>
+                                    <p><a href="/">Mis Abonos</a></p>
                                     <img src={iconArrow} alt="" />
                                 </a>
                             </div>
