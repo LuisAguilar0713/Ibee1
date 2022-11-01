@@ -30,7 +30,7 @@ export const EstadoCuenta = () => {
                                 <p>Paga puntualmente y descúbrelos.</p>
                             </div>
                             <div className="bloque">
-                                <a href="" className="contenidoBloque">
+                                <a href="/Abonos" className="contenidoBloque">
                                     <img src={iconAbonos} alt="" />
                                     <p><a href="/">Mis Abonos</a></p>
                                     <img src={iconArrow} alt="" />

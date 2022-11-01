@@ -73,7 +73,7 @@ const Paciente: React.FC = () => {
 
                                     
                                 </p>
-                                <a href="">
+                                <a href="/MisTratamientos">
                                     <div><img src={iconTratamiento} alt="" />
                                         <p>Mis Tratamientos</p></div>
                                     <img className="flecha" src={iconArrow} alt="" />
@@ -88,7 +88,7 @@ const Paciente: React.FC = () => {
                                         <p>Estados de Cuenta</p></div>
                                     <img className="flecha" src={iconArrow} alt="" />
                                 </a>
-                                <a href="">
+                                <a href="/MisEstudios">
                                     <div><img src={iconEstudios} alt="" />
                                         <p>Mis Estudios</p></div>
                                     <img className="flecha" src={iconArrow} alt="" />

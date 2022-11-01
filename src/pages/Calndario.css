@@ -289,6 +289,7 @@ form::-webkit-scrollbar-thumb {
     background-color: var(--azulClaro);
     text-align: center;
     visibility: visible !important;
+    
 }
 
 .contenedorCalndario span:nth-child(3) button:nth-child(4)::before {

@@ -141,7 +141,7 @@
     font-weight: bold;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     cursor: pointer;
-    width: 197px;
+    width: 241px;
 }
 .miAgenda .contenido a:hover .consultorio{
     background-color: #eff0f1;
@@ -290,7 +290,7 @@ ul, li{
   
   .cit li:hover >ul{
     display: block;
-    right: -300px;
+    right: -318px;
   }
   @media only screen and (max-width: 320px) {
     .cit li:hover >ul{

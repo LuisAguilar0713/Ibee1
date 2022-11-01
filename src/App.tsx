@@ -50,10 +50,15 @@ import { CalendarioSemana } from './pages/CelndarioSemana';
 import { Toaster } from 'react-hot-toast'
 import { PrivateRoute } from './routes/PrivateRoute';
 import { Mas } from './pages/Mas';
+<<<<<<< HEAD
+import { MisTratamientos } from './pages/MisTratamientos';
+import { MisEstudios } from './pages/MisEstudios';
+=======
 
 import { checkmarkOutline } from 'ionicons/icons';
 
 
+>>>>>>> 72e267f215adfe89ef290ee08f859e05e7cba293
 const App: React.FC = () => (
   <IonApp>
     <div><Toaster /></div>
@@ -111,6 +116,18 @@ const App: React.FC = () => (
           path="/paciente/:id"
           component={Paciente}
         />
+        
+        <PrivateRoute
+          exact
+          path="/MisTratamientos"
+          component={MisTratamientos}
+        />
+         <PrivateRoute
+          exact
+          path="/MisEstudios"
+          component={MisEstudios}
+        />
+
 
         <PrivateRoute
           exact
