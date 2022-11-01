@@ -136,6 +136,7 @@ export const RegistroOrdenTrabajo = ({setShowModal }) => {
 						<label htmlFor=''>37<input className='btnRadio' type='radio' name='37'></input></label></div>
 						</div>
 					</div>
+					
 				<IonButton >Crear</IonButton>
 			</form>
 

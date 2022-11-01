@@ -77,23 +77,6 @@ export const Laboratorio = () => {
 							<div id="text">
 								<h3>Registro orden de trabajo</h3>
 							</div>
-							<input
-								id="campoBuscar"
-								autoComplete="off"
-								type="text"
-								placeholder="Buscar"
-								name="buscar"
-								value={termino}
-								onChange={(e) => {
-									setTermino(e.target.value)
-									buscar(e)
-								}}
-							/>
-						</div>
-						<div className="contenedorBtn">
-							<button id="btnBuscar" onClick={mostrar}>
-								<img src={busca} alt="" />
-							</button>
 						</div>
 						<div className="contenedorBtn">
 							<IonButton
