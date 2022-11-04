@@ -7,16 +7,16 @@ import plus from './../assets/img/plus-circle.svg'
 import { useHistory } from 'react-router'
 import './PacientesPrincipal.css'
 import { IonButton, IonModal } from '@ionic/react'
-import { CrearPacienteModal } from '../components/modals/CrearPacienteModal'
+import { RegistroOrdenTrabajo } from '../components/modals/RegistroOrdenTrabajo'
 import { agregarPacienteAlHistorial } from '../utils/agregarPacienteAlHistorial'
 
-export const PacientesPrincipal = () => {
+export const Laboratorio = () => {
 	// gets pacientes from localstorage
-	const pacientesStorage = localStorage.getItem('pacientes')
-	const pacientesHistorial = pacientesStorage
-		? JSON.parse(pacientesStorage)
+	const PacientesStorage = localStorage.getItem('Pacientes')
+	const pacientesHistorial = PacientesStorage
+		? JSON.parse(PacientesStorage)
 		: []
-	const [pacientes, setPacientes] = useState(pacientesHistorial)
+	const [Pacientes, setPacientes] = useState(pacientesHistorial)
 	const [termino, setTermino] = useState('')
 	const [mostrarBoton, setmostrarBoton] = useState(false)
 	const [showModal, setShowModal] = useState(false)
@@ -49,9 +49,9 @@ export const PacientesPrincipal = () => {
 		setmostrarBoton(!mostrarBoton)
 	}
 
-	const handlePacienteClick = (paciente: any): void => {
-		agregarPacienteAlHistorial( paciente )
-		history.push(`/paciente/${paciente.id_paciente}`)
+	const handlePacienteClick = (Paciente: any): void => {
+		agregarPacienteAlHistorial( Paciente )
+		history.push(`/paciente/${Paciente.id_paciente}`)
 	}
 
 	return (
@@ -66,7 +66,7 @@ export const PacientesPrincipal = () => {
 						setShowModal(false)
 					}}
 				>
-					<CrearPacienteModal 
+					<RegistroOrdenTrabajo 
             setShowModal={setShowModal}
           />
 				</IonModal>
@@ -75,26 +75,8 @@ export const PacientesPrincipal = () => {
 					<form className="busqueda">
 						<div className="textoBusqueda">
 							<div id="text">
-								<h1>Pacientes</h1>
-								<p>Información, tratamientos, servicion</p>
+								<h3>Registro orden de trabajo</h3>
 							</div>
-							<input
-								id="campoBuscar"
-								autoComplete="off"
-								type="text"
-								placeholder="Buscar"
-								name="buscar"
-								value={termino}
-								onChange={(e) => {
-									setTermino(e.target.value)
-									buscar(e)
-								}}
-							/>
-						</div>
-						<div className="contenedorBtn">
-							<button id="btnBuscar" onClick={mostrar}>
-								<img src={busca} alt="" />
-							</button>
 						</div>
 						<div className="contenedorBtn">
 							<IonButton
@@ -102,17 +84,10 @@ export const PacientesPrincipal = () => {
               >+</IonButton>
 						</div>
 					</form>
-
-					<div className="listPacientesP">
-						<ListaPacientes
-							pacientes={pacientes}
-							handlePacienteClick={handlePacienteClick}
-						/>
-					</div>
 				</div>
 			</div>
 		</Layout>
 	)
 }
 
-export default PacientesPrincipal
+export default Laboratorio
