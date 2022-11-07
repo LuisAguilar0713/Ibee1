@@ -1,0 +1,58 @@
+
+on-card-header.ios {
+    display: flex;
+    flex-flow:  column-reverse;
+ }
+
+
+
+.inventario {
+   width: 200%
+}
+.inventario .contenido {
+   max-width: 100%;
+}
+
+.IonButton {
+
+   color: var(--negroOpaco);
+}
+
+.producto {
+
+   background-color: azure;
+   width: 30%;
+   align-items: center;
+   
+}
+
+.producto1 {
+
+   align-items: right;
+
+    }
+
+.Consultorio1 {
+
+   background-color: azure;
+    width: 100%;
+}
+
+img {
+   align-items: center;
+   width: 25%;
+}
+
+
+.header{
+
+   text-align: center;
+   
+}
+.Barrabusqueda{
+    
+   width: 31%;
+   justify-content: flex-end;
+   align-items: flex-start;
+   direction: row;
+}
