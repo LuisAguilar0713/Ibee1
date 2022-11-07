@@ -85,7 +85,7 @@ const Agenda: React.FC = () => {
 				values
 			)
 		} catch (error) {
-			console.log(error)
+			
 			toast.success('Se agrego nuevo consultorio')
 		}
 	}

@@ -49,6 +49,14 @@ import { CalendarioSemana } from './pages/CelndarioSemana';
 import { Toaster } from 'react-hot-toast'
 import { PrivateRoute } from './routes/PrivateRoute';
 import { Mas } from './pages/Mas';
+//Agg para pag de Inventario
+import { inventario } from './pages/inventario';
+//import { entradas } from './pages/inventario';
+//Simport { esterelizado } from './pages/inventario';
+import { Consultorio } from './pages/Consultorio'; //manda a traer pag consultorio
+import { esterelizado } from './pages/Esterelizado'; //manda a traer pag esterelizado
+//import { bodega } from './pages/Bodega'; //manda a a traer pag bodega
+//import { sistemas } from './pages/Sistemas';
 
 const App: React.FC = () => (
   <IonApp>
@@ -198,6 +206,27 @@ const App: React.FC = () => (
           component={Mas}
         />
 
+<PrivateRoute
+          exact
+          path="/inventario"
+          component={inventario} //ventana inventario
+
+        />
+
+<PrivateRoute
+          exact
+          path="/consultorio"
+          component={Consultorio} //ventana consultorio
+
+        />
+<PrivateRoute
+          exact
+          path="/esterelizado"
+          component={esterelizado} //ventana esterelizado
+
+        />
+        
+        
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

@@ -1,3 +1,16 @@
+.inventario{
+    width: 200%
+}
+.inventario .contenido{
+    max-width: 100%;
+   
+}
+.inventario .contenido p{
+    display: flex;
+    align-items: left;
+    color: var(--azulMedio);
+}
+
 .contenedorBloque1{
     display: flex;
     justify-content: space-around;

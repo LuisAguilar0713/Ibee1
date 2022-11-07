@@ -1,5 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+//import ExploreContainer from '../components/ExploreContainer';
 import './AgregarCita.css'
 import guardar from '../assets/img/save-solid.svg'
 import lupa from './../assets/img/search-solid.svg'
