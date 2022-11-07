@@ -63,7 +63,13 @@
     width: 30px;
     filter: var(--blancoImg);
 }
-
+.estadoCuenta .contenido .contenedorTotal p a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
 .estadoCuenta .contenido .contenedorTotal p{
     color: white;
 }

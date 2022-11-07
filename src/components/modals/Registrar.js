@@ -61,12 +61,12 @@ const crear = async () => {
 		toast.error('Ingresa un correo valido')
 	}
 	
-	else if(size(values.password) < 6 ){
-		toast.error("Ingresa una contraseña de almenos 6 caracteres")
+	else if(size(values.password) < 8 ){
+		toast.error("Ingresa una contraseña de almenos 8 caracteres")
 	}
 
 	else if(values.password !== values.confirm){
-		toast.error("Las contraseñas no coinsiden")
+		toast.error("Las contraseñas no coinciden")
 	}
 
 	else{
@@ -104,8 +104,6 @@ const crear = async () => {
 				</button>
 			</div>
 
-			
-		
 			<form className="form-container1">
                     <div className='b'>
 					<input 

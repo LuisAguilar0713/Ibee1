@@ -25,7 +25,7 @@ export const CustomAgendaHeader = ({ setFecha, fecha, rango }) => {
             </div>
 
             <div className="contenidoBtn">
-                <a href={`/agendax/${sanitizeFecha(fecha)}/1`}>Dia</a>
+                <a href={`/agendax/${sanitizeFecha(fecha)}/1`}>Diaaaaaaaa</a>
                 <a href="/semanas">Semana</a>
                 <a href="/cita/2266">Mes</a>
             </div>

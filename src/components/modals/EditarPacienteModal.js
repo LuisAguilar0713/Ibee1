@@ -12,7 +12,7 @@ const estadosDeMexico = ['Aguascalientes','Baja California','Baja California Sur
 
 export const EditarPacienteModal = ({ paciente, df, setPaciente, setShowModal }) => {
 	const [values, setValues] = useState({
-		foto: paciente.url,
+		//foto: paciente.url,
 		nombre: paciente.nombre,
 		ap_materno: paciente.ap_materno,
 		ap_paterno: paciente.ap_paterno,

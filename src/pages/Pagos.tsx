@@ -73,7 +73,7 @@ export const Pagos = () => {
 
     return (
         <Layout>
-            <a href={`/Paciente/${pacienteId}`} ><ArrowLeftIcon size={30} /></a>
+            <a href={`/Paciente/${pacienteId}`} className= "arrow"><ArrowLeftIcon size={40} /></a>
             <div className="contenedorPagos">
                 <div className="infoPersonal">
                     <div className="imagen">
@@ -98,7 +98,7 @@ export const Pagos = () => {
 
                     <div className="datosMovil">
 
-                        <p className="nombre"><label><b>Nombre:</b></label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
+                        <p className="nombre"><label><b>Nombre:</b></label><label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
                         <p><label><b>Edad:</b> </label><label>{paciente.edad}</label></p>
                         <p><label><b>RFC:</b> </label><label> {paciente.rfc} </label></p>
                         <p><label><b>Direccion:</b></label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>

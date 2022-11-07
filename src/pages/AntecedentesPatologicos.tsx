@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { Layout } from '../components/layout/Layout';
 import { config } from '../env';
 import "./AntecedentesPatologicos.css";
+import {ArrowLeftIcon} from '@primer/octicons-react';
 
 export const AntecedentesPatologicos = () => {
 
@@ -23,7 +24,7 @@ export const AntecedentesPatologicos = () => {
         enfermedades_IeINT: "",
         otras: "",
     }
-
+    
     const [values, setvalues] = useState(initialValues);
     const [showToast, setShowToast] = useState(false);
     const params: any = useParams();
@@ -54,7 +55,7 @@ export const AntecedentesPatologicos = () => {
             console.log(error);
         }
     }
-
+    const pacienteId  = params.pacienteId 
     const handleSubmit = (e: any) => {
         e.preventDefault();
         var myHeaders = new Headers();
@@ -92,14 +93,15 @@ export const AntecedentesPatologicos = () => {
 
     return (
         <>
+            <a href={`/HistoriaClinica/${pacienteId}`} className="arrows" ><ArrowLeftIcon size={40} /></a>
             <div className="contenedorAntecedentesP">
                 <h1>Antecedentes Patológicos Hereditarios</h1>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="">Padecimientos de familiares en línea directa</label>
                     <div className="limpiar">
+                        <label>MADRE:</label>
                         <input
                             type="text"
-                            placeholder="Madre"
                             name="madre"
                             value={values.madre}
                             onChange={handleChange}
@@ -110,9 +112,9 @@ export const AntecedentesPatologicos = () => {
                         >x</button>
                     </div>
                     <div className="limpiar">
+                    <label>PADRE:</label>
                         <input
                             type="text"
-                            placeholder="Padre"
                             name="padre"
                             value={values.padre}
                             onChange={handleChange}
@@ -123,9 +125,9 @@ export const AntecedentesPatologicos = () => {
                         >x</button>
                     </div>
                     <div className="limpiar">
+                    <label>HERMANOS:</label>
                         <input
                             type="text"
-                            placeholder="Hermanos"
                             name="hermanos"
                             value={values.hermanos}
                             onChange={handleChange}
@@ -136,9 +138,9 @@ export const AntecedentesPatologicos = () => {
                         >x</button>
                     </div>
                     <div className="limpiar">
+                    <label>HIJOS:</label>
                         <input
                             type="text"
-                            placeholder="Hijos"
                             name="hijos"
                             value={values.hijos}
                             onChange={handleChange}
@@ -149,9 +151,9 @@ export const AntecedentesPatologicos = () => {
                         >x</button>
                     </div>
                     <div className="limpiar">
+                    <label>ESPOSO(A):</label>
                         <input
                             type="text"
-                            placeholder="Esposo(a)"
                             name="esposo_a"
                             value={values.esposo_a}
                             onChange={handleChange}
@@ -162,9 +164,9 @@ export const AntecedentesPatologicos = () => {
                         >x</button>
                     </div>
                     <div className="limpiar">
+                    <label>TÍOS:</label>
                         <input
                             type="text"
-                            placeholder="Tíos"
                             name="tios"
                             value={values.tios}
                             onChange={handleChange}
@@ -175,9 +177,9 @@ export const AntecedentesPatologicos = () => {
                         >x</button>
                     </div>
                     <div className="limpiar">
+                    <label>ABUELOS:</label>
                         <input
                             type="text"
-                            placeholder="Abuelos"
                             name="abuelos"
                             value={values.abuelos}
                             onChange={handleChange}

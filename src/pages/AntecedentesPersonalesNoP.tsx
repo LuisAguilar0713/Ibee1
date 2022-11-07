@@ -1,19 +1,27 @@
 import React, { useState } from 'react'
 import "./AntecedentesPersonalesNoP.css"
+import {ArrowLeftIcon} from '@primer/octicons-react';
+import { useParams } from 'react-router';
 
 export const AntecedentesPersonalesNoP = () => {
-
+    const params: any = useParams()
     const [mostrar, setmostrar] = useState({
         transmisionSex: false,
-        esquema: false
+        golosinas: false,
+        cartilla:false,
+        esquema: false,
+        fechahos: false,
+        motivohos:false,
+        padecimientos:false
     });
 
     const maneSubmit = (e: any) => {
         e.preventDefault()
     }
-
+    const pacienteId  = params.pacienteId 
     return (
         <>
+            <a href={`/HistoriaClinica/${pacienteId}`} className="arrows" ><ArrowLeftIcon size={40} /></a>
             <div className="contenedorAntecedentesPersonalesNoP">
                 <h1>Antecedentes Personales No Patológicos</h1>
                 <form onSubmit={
@@ -51,10 +59,24 @@ export const AntecedentesPersonalesNoP = () => {
                     <div className="bloque">
                         <label htmlFor="" className="obligatorio">Consume golosinas u otro tipo de alimentos entre las comidas</label>
                         <div>
-                            <button>Si</button>
-                            <button>No</button>
+                            <button onClick={
+                                () => setmostrar({ ...mostrar, golosinas: true })
+                            }>Si</button>
+                            <button onClick={
+                                () => setmostrar({ ...mostrar, golosinas: false })
+                            }>No</button>
                         </div>
                     </div>
+                    {
+                        mostrar.golosinas ? (
+                            <>
+                                <div className="limpiar">
+                                    <input type="text" placeholder="" />
+                                    <button>x</button>
+                                </div>
+                            </>
+                        ) : null
+                    }
                     <div className="bloqueDos">
                         <input type="text" placeholder="Grupo sanguineo" />
                         <input type="text" placeholder="Factor Rh" />
@@ -63,11 +85,24 @@ export const AntecedentesPersonalesNoP = () => {
                     <div className="bloque">
                         <label htmlFor="">Cartilla de vacunación</label>
                         <div>
-                            <button>Si</button>
-                            <button>No</button>
+                            <button onClick={
+                                () => setmostrar({ ...mostrar, cartilla: true })
+                            }>Si</button>
+                            <button onClick={
+                                () => setmostrar({ ...mostrar, cartilla: false })
+                            }>No</button>
                         </div>
                     </div>
-
+                    {
+                        mostrar.cartilla ? (
+                            <>
+                                <div className="limpiar">
+                                    <input type="text" placeholder="" />
+                                    <button>x</button>
+                                </div>
+                            </>
+                        ) : null
+                    }
                     <div className="bloque">
                         <label htmlFor="">Esquema completo</label>
                         <div>
@@ -112,20 +147,47 @@ export const AntecedentesPersonalesNoP = () => {
                     <div className="bloque">
                         <label htmlFor="">Ha sido hospitalizado</label>
                         <div>
-                            <button>Si</button>
-                            <button>No</button>
+                            <button onClick={
+                                () => setmostrar({ ...mostrar, fechahos: true, motivohos:true, padecimientos: true })
+                            }>Si</button>
+                            <button onClick={
+                                () => setmostrar({ ...mostrar, fechahos: false, motivohos:false, padecimientos:false })
+                            }>No</button>
                         </div>
                     </div>
-                    <input type="date" name="" id="" value="Fecha" />
-                    <div className="limpiar">
-                        <input type="text" placeholder="Motivo" />
-                        <button>x</button>
-                    </div>
+                    
+                    {
+                        mostrar.fechahos ? (
+                            <>
+                                <div className="limpiar">
+                                <input type="date" name="" id="" value="Fecha" />
+                                    <button>x</button>
+                                </div>
+                            </>
+                        ) : null
+                    }
 
-                    <div className="limpiar">
-                        <input type="text" placeholder="Padecimientos" />
-                        <button>x</button>
-                    </div>
+{
+                        mostrar.motivohos ? (
+                            <>
+                                <div className="limpiar">
+                                <input type="text" placeholder="Motivo" />
+                                    <button>x</button>
+                                </div>
+                            </>
+                        ) : null
+                    }
+
+{
+                        mostrar.padecimientos ? (
+                            <>
+                                <div className="limpiar">
+                                <input type="text" placeholder="Padecimientos" />
+                                    <button>x</button>
+                                </div>
+                            </>
+                        ) : null
+                    }
                     <br />
                     <div className="btnGuardar">
                         <button type="submit">Guardar</button>

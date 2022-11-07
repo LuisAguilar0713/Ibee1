@@ -35,6 +35,7 @@ import { Citas } from './pages/Citas';
 import { CustomAgenda } from './components/customAgenda/CustomAgenda';
 import { Agendax } from './pages/Agendax';
 import { Semanas } from './pages/Semanas';
+import { Laboratorio }from './pages/Laboratorio';
 import { HistoriaClinica } from './pages/HistoriaClinica';
 import { FichaIndentificacion } from './pages/FichaIndentificacion';
 import { AntecedentesPatologicos } from './pages/AntecedentesPatologicos';
@@ -57,6 +58,14 @@ import { Consultorio } from './pages/Consultorio'; //manda a traer pag consultor
 import { esterelizado } from './pages/Esterelizado'; //manda a traer pag esterelizado
 //import { bodega } from './pages/Bodega'; //manda a a traer pag bodega
 //import { sistemas } from './pages/Sistemas';
+
+import { MisTratamientos } from './pages/MisTratamientos';
+import { MisEstudios } from './pages/MisEstudios';
+
+
+import { checkmarkOutline } from 'ionicons/icons';
+
+
 
 const App: React.FC = () => (
   <IonApp>
@@ -115,6 +124,18 @@ const App: React.FC = () => (
           path="/paciente/:id"
           component={Paciente}
         />
+        
+        <PrivateRoute
+          exact
+          path="/MisTratamientos"
+          component={MisTratamientos}
+        />
+         <PrivateRoute
+          exact
+          path="/MisEstudios"
+          component={MisEstudios}
+        />
+
 
         <PrivateRoute
           exact
@@ -132,6 +153,12 @@ const App: React.FC = () => (
           exact
           path="/estadocuenta"
           component={EstadoCuenta}
+        />
+        
+        <PrivateRoute
+          exact
+          path="/Laboratorio"
+          component={Laboratorio}
         />
 
         <PrivateRoute
@@ -206,6 +233,7 @@ const App: React.FC = () => (
           component={Mas}
         />
 
+<<<<<<< HEAD
 <PrivateRoute
           exact
           path="/inventario"
@@ -227,6 +255,10 @@ const App: React.FC = () => (
         />
         
         
+=======
+
+
+>>>>>>> cc3cfbef91c02a01e43a55749bd092a9339e18b1
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

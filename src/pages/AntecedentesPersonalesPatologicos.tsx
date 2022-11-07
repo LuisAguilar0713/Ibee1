@@ -40,7 +40,7 @@ export const AntecedentesPersonalesPatologicos = () => {
 
     return (
         <>
-        <a href={`/HistoriaClinica/${pacienteId}`} ><ArrowLeftIcon size={30} /></a>
+        <a href={`/HistoriaClinica/${pacienteId}`} className="arrows" ><ArrowLeftIcon size={40} /></a>
             <div className="contenedorAntecedentesPersonalesP">
                 <h1>Antecedentes Personales Patologicos</h1>
                 <form onSubmit={

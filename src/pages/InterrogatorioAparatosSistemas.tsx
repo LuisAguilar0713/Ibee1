@@ -5,6 +5,7 @@ import { useParams } from 'react-router';
 import { Layout } from '../components/layout/Layout';
 import { config } from '../env';
 import "./InterrogatorioAparatosSistemas.css";
+import {ArrowLeftIcon} from '@primer/octicons-react';
 
 const limpiar = () => {
     let idAp = document.getElementById("aDigestivo");
@@ -76,9 +77,11 @@ export const InterrogatorioAparatosSistemas = () => {
             })
             .catch(error => console.log('error', error));
     }
+    const pacienteId  = params.pacienteId 
 
     return (
         <>
+        <a href={`/HistoriaClinica/${pacienteId}`} className="arrows"><ArrowLeftIcon size={40} /></a>
             <div className="contenedorInterrogatorioAparatosSistemas">
                 <h1>Interrogatorio por Aparatos y Sistemas</h1>
                 <form onSubmit={ guardarDatos } >

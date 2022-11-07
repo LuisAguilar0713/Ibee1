@@ -113,7 +113,7 @@
 .contenedorAntecedentesPersonalesNoP form .bloqueTres div{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .contenedorAntecedentesPersonalesNoP form .bloqueTres div label{
     font-weight: 500;
@@ -131,7 +131,7 @@
 .contenedorAntecedentesPersonalesNoP form .bloqueCuatro div{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .contenedorAntecedentesPersonalesNoP form .bloqueCuatro div label{
     font-weight: 500;
