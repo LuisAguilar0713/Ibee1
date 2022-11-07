@@ -1,8 +1,8 @@
 .estadoCuenta{
-    width: 100%;
+    width: 100%
 }
 .estadoCuenta .contenido{
-    width: 90%;
+    max-width: 100%;
 }
 .estadoCuenta .contenido p{
     display: flex;
@@ -36,9 +36,9 @@
     align-items: center;
     justify-content: space-between;
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 280px){
     .estadoCuenta .contenido{
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
     }
     .estadoCuenta .contenido .contenedorTotal div{
@@ -63,7 +63,13 @@
     width: 30px;
     filter: var(--blancoImg);
 }
-
+.estadoCuenta .contenido .contenedorTotal p a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
 .estadoCuenta .contenido .contenedorTotal p{
     color: white;
 }

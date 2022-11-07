@@ -11,6 +11,7 @@
     }
 }
 
+
 .rbc-today {
     background-image: radial-gradient(var(--azulMuyClaro), var(--azulClaro));
     border-radius: 7px;
@@ -35,6 +36,8 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: .5rem;
+    margin-bottom: 25px;
+    margin-left: -5%;
 }
 
 .rbc-toolbar-label {
@@ -47,6 +50,7 @@
     .rbc-toolbar {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
 }
 
 .rbc-btn-group {
@@ -55,10 +59,13 @@
     align-items: center;
     width: 100%;
     white-space: nowrap;
+    margin-top: 25px;
+    margin-left: 3px;
 }
 
 .rbc-time-header.rbc-overflowing {
     margin: 0;
+    margin-right: 8px;
 }
 
 .rbc-time-content::-webkit-scrollbar {
@@ -119,10 +126,82 @@ form::-webkit-scrollbar-thumb {
     padding: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     .contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div span::before {
         font: .7rem;
+    }
+    .rbc-toolbar .rbc-toolbar-label {
+        margin-left: -68px;
+        margin-right: -120px;
+        margin-top: -20px;
+}
+    .rbc-btn-group {
+        margin-left: 15px;
+            margin-top: 80px;
+    }    
+}
+
+@media only screen and (max-width: 425px){
+.rbc-toolbar .rbc-toolbar-label {
+    margin-left: -90px;
+    margin-right: -120px;
+    margin-top: 14px;
+    margin-bottom: -43px;
+}
+.rbc-btn-group {
+    margin-top: 50px;
+}
+}
+@media only screen and (max-width: 540px){
+    .rbc-toolbar .rbc-toolbar-label {
+        margin-left: -99px;
+        margin-right: -120px;
+        margin-top: -4px;
+        margin-bottom: -53px;
+    }
+
+.rbc-btn-group {
+    margin-left: 15px;
+    margin-top: 42px;
+}
+    }
+
+@media only screen and (min-width: 1024px) {
+
+    .contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div span::before {
+        font: .7rem;
+    }
+    .rbc-btn-group {
+        margin-left: 15px;
+    }
+    .rbc-toolbar .rbc-toolbar-label {
+        margin-left: 18px;
+        font-size: 15px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+
+    .rbc-toolbar {
+        margin-left: -8%;
+    }
+}
+@media only screen and (min-width: 1440px) {
+
+    .contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div span::before {
+        font: .7rem;
+    }
+    .rbc-btn-group {
+        margin-left: 5px;
+    }
+    
+    .rbc-toolbar {
+        margin-left: -5%;
+    }
+    
+    .rbc-toolbar .rbc-toolbar-label {
+        margin-left: -29px;
+    font-size: 22px;
     }
 }
 
@@ -210,6 +289,7 @@ form::-webkit-scrollbar-thumb {
     background-color: var(--azulClaro);
     text-align: center;
     visibility: visible !important;
+    
 }
 
 .contenedorCalndario span:nth-child(3) button:nth-child(4)::before {

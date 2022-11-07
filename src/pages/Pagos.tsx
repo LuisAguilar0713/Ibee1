@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Layout } from '../components/layout/Layout'
-import foto from './../assets/img/woman-gfec6923be_640.jpg'
+//import foto from './../assets/img/woman-gfec6923be_640.jpg'
 import './Pagos.css'
 import lupita from './../assets/img/Lupa.svg'
 import { config } from '../env'
@@ -8,7 +8,7 @@ import { useParams } from 'react-router'
 import { HistorialPagos } from '../components/pagos/HistorialPagos'
 import axios from 'axios'
 import { IonButton, IonCol, IonGrid, IonInput, IonItem, IonItemDivider, IonList, IonModal, IonRow } from '@ionic/react'
-
+import {ArrowLeftIcon} from '@primer/octicons-react';
 export const Pagos = () => {
 
     const [paciente, setPaciente] = useState<any>({
@@ -25,6 +25,7 @@ export const Pagos = () => {
         estado: '',
         numero: '',
         telefono: '',
+        Whatsapp:'',
         tutor: ''
     })
     const [historialPagos, setHistorialPagos] = useState<any>([]);
@@ -36,7 +37,7 @@ export const Pagos = () => {
         getPaciente()
         getHistorialPagos()
     }, [])
-
+    const pacienteId  = params.pacienteId
     const getPaciente = async () => {
         try {
             const res = await fetch(`${config.baseUrl}/api/pacienteParaPago/${params.pacienteId}`)
@@ -72,7 +73,7 @@ export const Pagos = () => {
 
     return (
         <Layout>
-
+            <a href={`/Paciente/${pacienteId}`} className= "arrow"><ArrowLeftIcon size={40} /></a>
             <div className="contenedorPagos">
                 <div className="infoPersonal">
                     <div className="imagen">
@@ -80,28 +81,40 @@ export const Pagos = () => {
                     </div>
 
                     <div className="datos">
-                        <p className="nombre"><label>Nombre:</label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
-                        <p><label>Edad: </label><label>{paciente.edad}</label></p>
-                        <p><label>RFC: </label><label> {paciente.rfc} </label></p>
-                        <p><label>Direccion:</label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
-                        <p><label>Telefono:</label><label>{paciente.telefono}</label></p>
-                        <p><label>Tutor:</label><label>{paciente.tutor?.nombre}</label></p>
+
+                        <p className="nombre"><label><b>Nombre:</b></label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
+                        <p><label><b>Edad: </b></label><label>{paciente.edad}</label></p>
+                        <p><label><b>RFC:</b> </label><label> {paciente.rfc} </label></p>
+                        <p><label><b>Direccion:</b></label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
+                        <p><label><b>Telefono:</b></label><label>{paciente.telefono}</label></p>
+                        <p><label><b>Whatsapp: </b></label><label>{paciente.Whatsapp}</label></p>
+                        <p><label><b>Tutor:</b></label><label>{paciente.tutor?.nombre}</label></p>
+
+
                     </div>
                 </div>
 
                 <div className="infoEconomica">
 
                     <div className="datosMovil">
-                        <p className="nombre"><label>Nombre:</label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
-                        <p><label>Edad: </label><label>{paciente.edad}</label></p>
-                        <p><label>RFC: </label><label> {paciente.rfc} </label></p>
-                        <p><label>Direccion:</label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
-                        <p><label>Telefono:</label><label>{paciente.telefono}</label></p>
-                        <p><label>Tutor:</label><label>{paciente.tutor?.nombre}</label></p>
+
+                        <p className="nombre"><label><b>Nombre:</b></label><label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
+                        <p><label><b>Edad:</b> </label><label>{paciente.edad}</label></p>
+                        <p><label><b>RFC:</b> </label><label> {paciente.rfc} </label></p>
+                        <p><label><b>Direccion:</b></label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
+                        <p><label><b>Telefono:</b></label><label>{paciente.telefono}</label></p>
+                        <p><label><b>Tutor:</b></label><label>{paciente.tutor?.nombre}</label></p>
+                        <p className="nombre"><label><b>Nombre:</b> </label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
+                        <p><label><b>Edad:</b>  </label><label>{paciente.edad}</label></p>
+                        <p><label><b>RFC:</b>  </label><label> {paciente.rfc} </label></p>
+                        <p><label><b>Direccion:</b> </label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
+                        <p><label><b>Telefono:</b> </label><label>{paciente.telefono}</label></p>
+                        <p><label><b>Tutor:</b> </label><label>{paciente.tutor?.nombre}</label></p>
+
                     </div>
                     <div className="menu">
                         <button onClick={postHistorialPagos}>+</button>
-                        <input type="text" />
+                        <input className='buscar' type="text" />
                         <button><img src={lupita} alt="paciente" /></button>
                     </div>
                     {

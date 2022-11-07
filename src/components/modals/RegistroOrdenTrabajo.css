@@ -1,0 +1,145 @@
+.form-container{
+    overflow-y: scroll;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bloqueCuatro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.bloqueCuatro div{
+    display: flex;
+    justify-content: space-evenly;
+    height: 3.8rem;
+}
+
+.bloqueCuatro div label{
+    font-weight: bold;
+}
+.bloqueCuatro div .btnRadio{
+    width: 15px;
+}
+
+.limpiar{
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.form-container .a .btnRadio{
+    width: 15px;
+}
+
+.form-container .a label{
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.margen{
+    margin-right: 2rem;
+}
+
+.amb{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: -10px 0 1rem 0;
+}
+
+.form-container .label .naranja{
+    color: coral;
+   font-weight: bold;
+}
+.margen2{
+    margin-left: 2rem;
+}
+
+.folioidfolio{
+    display: flex;
+    flex-direction: column;
+}
+
+.idFolio{
+    height: 2.5rem;
+    width: 4.5rem;
+    border-color: darkorange;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #d57500;
+}
+
+.folio{
+    margin-right: 25px;
+    display: flex;
+    background-color: #d57500;
+    color: white;
+    height: 2rem;
+    width: 4.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logoFolio{
+    display: flex   ;
+}
+
+.bloqueCuatro .label{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-weight: bold;
+}
+
+.dientes{
+    height: 6rem;
+    width: 20rem;
+    background-image: url(../../assets/img/Dientes.PNG);
+    background-size: cover;
+}
+
+.diente{
+    height: 8rem;
+    width: 8rem;
+    background-image: url(../../assets/img/Diente.png);
+    background-size: cover;
+}
+
+.logoDTD {
+    height: 6rem;
+    width: 8rem;
+    background-image: url(../../assets/img/Logodtd.jpeg);
+    background-size: cover;
+    margin: -1rem 9rem auto auto;
+}
+
+.a button{
+    font-weight: bold;
+    margin-right: 2.5rem;
+}
+
+.form-container .text {
+    display: block;
+    font-size: 1rem;
+    text-align: start;
+    margin-left: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    width: 35%;
+    color: coral;
+}
+
+.form-container .a{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;    
+}

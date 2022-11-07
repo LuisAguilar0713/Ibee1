@@ -1,0 +1,76 @@
+ion-card-header.ios {
+    display: flex;
+    flex-flow:  column-reverse;
+    }
+
+ .inventario {
+    width: 100%
+   }
+
+.inventario .contenido {
+    max-width: 100%;
+   }
+
+   .card {
+    margin: 4rem 4rem 4rem 0;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0 0 28px 4px rgba(0,0,0,0.1);
+    transition: transform .3s ease;
+    float: left;
+        }
+
+.Titulo{
+    color: black;
+    width: 60%;
+    text-align: left;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card_title {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.Consultorio1 {
+    background-color: azure;
+    width: 100%;
+    }
+
+.header{ 
+    text-align: center;
+    flex-wrap: wrap;
+    }
+
+ .image{
+
+    width: 35%;
+ }
+
+.ContenidoTotal{
+   align-items: center;
+   width: 35%;
+   text-align: center;
+   }
+
+.boton{
+   float:right;
+   padding-right: 650px;
+   
+   }
+
+.Consultorio{
+    background-color: azure;
+   }  
+
+.Search-box{
+    width: 50%;
+    outline: none;
+    border: 1px solid grey;
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    }

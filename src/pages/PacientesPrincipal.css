@@ -65,6 +65,15 @@
     display: inline-block;
     text-transform: uppercase;
 }
+
+.contenedorPacientesPrincipal h3{
+    color: var(--azulFuerte);
+    margin-bottom: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
 .contenedorPacientesPrincipal .contenido p{
     margin: 0 10px 0 10px;
 }

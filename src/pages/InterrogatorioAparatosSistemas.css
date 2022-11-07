@@ -1,3 +1,9 @@
+.arrows{
+    margin-bottom: 600px;
+    margin-left: 30px;
+    font-weight: bolder;
+    color: var(--azulFuerte);
+}
 .contenedorInterrogatorioAparatosSistemas {
     width: 90%;
     margin: 0 auto;
@@ -51,10 +57,12 @@
 .contenedorInterrogatorioAparatosSistemas form .bloque div button{
     background-color: gray;
     color: white;
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1rem;
+    height: 1rem;
+    font-size: x-small;
     border-radius: 100px;
     text-align: center;
+    
 }
 .contenedorInterrogatorioAparatosSistemas form input{
     background-color: var(--azulClaro);

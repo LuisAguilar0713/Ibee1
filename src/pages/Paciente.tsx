@@ -12,17 +12,21 @@ import iconEstudios from '../assets/img/Odontograma de evoluciónsvg.svg'
 import iconPersonal from '../assets/img/pacientes.svg'
 import iconArrow from './../assets/img/arrow-derecha.png'
 import historia from './../assets/img/historial.svg'
+import edit from './../assets/img/editar.svg'
 import { config } from '../env'
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import {PencilIcon} from '@primer/octicons-react';
 import { EditarPacienteModal } from '../components/modals/EditarPacienteModal';
 
 const Paciente: React.FC = () => {
 
     const params: any = useParams()
     let pacienteInicio: any = null
+    let dfInicio: any = null
     const [paciente, setPaciente] = useState(pacienteInicio)
     const [showModal, setShowModal] = useState(false)
+    const [df,setdf]=useState()
 
     useEffect(() => {
         buscarPaciente()
@@ -39,10 +43,6 @@ const Paciente: React.FC = () => {
         }
     }
 
-    if (paciente === {}) {
-        return <h1>el paciente no existe</h1>
-    }
-
     return (
         <IonPage>
             <IonContent fullscreen>
@@ -57,6 +57,7 @@ const Paciente: React.FC = () => {
                         }}>
                             <EditarPacienteModal 
                                 paciente={ paciente }
+                                df={df}
                                 setPaciente={ setPaciente }
                                 setShowModal={ setShowModal }
                             />
@@ -66,15 +67,13 @@ const Paciente: React.FC = () => {
                             <div className="contedorPaciente">
 
                                 <div className="img" style={{ backgroundImage: `url(${config.baseUrlImagenes}/${paciente.url})` }}>
-
+                                <div className='editar' onClick={()=>setShowModal(true)}><button><PencilIcon size={30} /></button></div>
                                 </div>
                                 <p>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}
 
-                                    <IonButton
-                                        onClick={ ()=> setShowModal(true) }
-                                    >Editar</IonButton>
+                                    
                                 </p>
-                                <a href="">
+                                <a href="/MisTratamientos">
                                     <div><img src={iconTratamiento} alt="" />
                                         <p>Mis Tratamientos</p></div>
                                     <img className="flecha" src={iconArrow} alt="" />
@@ -89,7 +88,7 @@ const Paciente: React.FC = () => {
                                         <p>Estados de Cuenta</p></div>
                                     <img className="flecha" src={iconArrow} alt="" />
                                 </a>
-                                <a href="">
+                                <a href="/MisEstudios">
                                     <div><img src={iconEstudios} alt="" />
                                         <p>Mis Estudios</p></div>
                                     <img className="flecha" src={iconArrow} alt="" />

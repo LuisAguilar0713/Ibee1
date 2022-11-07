@@ -1,7 +1,7 @@
 .pantalla {
     background-color: white;
     min-height: 100vh;
-    color: var(--negroOpaco);
+   
     text-transform: capitalize;
 }
 
@@ -16,9 +16,8 @@ button {
 .headerPacientes {
     background-color: var(--azulFuerte);
     width: 100%;
-    text-align: center;
     padding-bottom: 1px;
-    padding-top: 10px;
+    padding-top: 25px;
     box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.473);
     color: white;
     display: flex;
@@ -28,8 +27,9 @@ button {
 }
 
 .headerPacientes .logo {
-    width: 30%;
-    margin: 0 auto;
+    width: 27%;
+    margin: 10px auto;
+    margin-left: 5px;
 }
 
 .headerPacientes .barHeader {
@@ -44,8 +44,8 @@ button {
 }
 
 .barHeader a img {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
     margin: 0 auto;
 }
 
@@ -68,19 +68,19 @@ button {
 @media only screen and (min-width: 600px) {
     .headerPacientes .logo {
         width: 26%;
+        
     }
 }
 .headerPacientes .usuario {
-    height: 3.5rem;
-    width: 3.5rem;
-    border-radius: 100px;
-    background-image: url(../../assets/img/woman-gfec6923be_640.jpg);
-    display: inline-block;
+    background-image: url(../../assets/img/LogoDentalB.png);
     background-size: cover;
     position: absolute;
-    margin: 0;
-    top: .5rem;
-    right: 20px;
+    right: 35px;
+    margin-top: 1%;
+    border-radius: 3px;
+    height: 3.1rem;
+    width: 3.3rem;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -107,7 +107,6 @@ button {
         top: 15px;
     }
 }
-
 
 .headerPacientes p {
     margin: 0 auto 10px auto;
@@ -194,6 +193,7 @@ form input{
 .obligatorio{
 padding-left: 10px!important;
 }
+
 
 /* 
 @-webkit-keyframes gradient {

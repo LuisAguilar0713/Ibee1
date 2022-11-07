@@ -56,7 +56,7 @@ export const CalendarioSemana = () => {
     const [horas, setHoras] = useState({ fecha: new Date(), hora1: null, hora2: null })
     const [showModal, setShowModal] = useState(false)
     const [selectedCita, setSelectedCita] = useState(null)
-    const [consultorio, setConsultorio] = useState(params.consultorio || 1)
+    const [consultorio, setConsultorio] = useState(params.consultorio || 2)
 
     useEffect(() => {
         getCitas()
@@ -184,6 +184,7 @@ export const CalendarioSemana = () => {
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
                     </select>
                 </div>
 
