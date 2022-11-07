@@ -233,32 +233,6 @@ const App: React.FC = () => (
           component={Mas}
         />
 
-<<<<<<< HEAD
-<PrivateRoute
-          exact
-          path="/inventario"
-          component={inventario} //ventana inventario
-
-        />
-
-<PrivateRoute
-          exact
-          path="/consultorio"
-          component={Consultorio} //ventana consultorio
-
-        />
-<PrivateRoute
-          exact
-          path="/esterelizado"
-          component={esterelizado} //ventana esterelizado
-
-        />
-        
-        
-=======
-
-
->>>>>>> cc3cfbef91c02a01e43a55749bd092a9339e18b1
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
