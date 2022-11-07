@@ -233,8 +233,7 @@ const App: React.FC = () => (
           component={Mas}
         />
 
-<<<<<<< HEAD
-=======
+
 
 <PrivateRoute
           exact
@@ -260,7 +259,7 @@ const App: React.FC = () => (
 
 
 
->>>>>>> d9d2c2f46c0272f33721c64b3e512f640cb06f90
+
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
