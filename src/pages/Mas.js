@@ -5,7 +5,7 @@ import { Layout } from '../components/layout/Layout'
 import iconArrow from './../assets/img/arrow-derecha.png'
 import iconAbonos from './../assets/img/moneyEC.png'
 import iconInventario from './../assets/img/inventario.png'
-import Laboratorio from './Laboratorio'
+import Laboratorio from './../assets/img/laboratorio_30.png'
 import './Mas.css'
 export const Mas = () => {
 
@@ -30,26 +30,27 @@ export const Mas = () => {
             
             </div>
 
-            <div className='contenedorBloque2'>
-            <div className="bloque2">
+            <div className='contenedorBloque1'>
+            <div className="bloque1">
             
-                <a href="/Inventario" className="contenidoBloque2">
+                <a href="/Inventario" className="contenidoBloque1">
                 <img src={iconInventario} alt="" />
                 <p>Inventario</p>
                 <img src={iconArrow} alt="" />
                 </a>
+            </div>
+            </div>
 
-                <div className="bloque1">
-                <a href="/laboratorio" className="contenidoBloque2">
+            <div className='contenedorBloque1'>
+            <div className="bloque1">
+                <a href="/Laboratorio" className="contenidoBloque3">
                 <img src={Laboratorio} alt="" />
                 <p>Laboratorio</p>
                 <img src={iconArrow} alt="" />
                 </a>
             </div>
-                
             </div>
             
-            </div>
         </Layout>
 
 

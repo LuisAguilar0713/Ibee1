@@ -38,7 +38,7 @@ on-card-header.ios {
     width: 100%;
 }
 
-img {
+.header img {
    align-items: center;
    width: 25%;
 }
