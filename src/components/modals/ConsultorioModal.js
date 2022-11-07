@@ -16,8 +16,8 @@ export const ConsultorioModal = ({ setShowModal }) => {
 	
 	const [values, setValues] = useState({
 		
-		nomproducto: '',
-		desproducto:'',
+		producto: '',
+		descripcion:'',
 		precio:'',
 		cantidad:'',
 		proveedor: '',
@@ -34,14 +34,16 @@ export const ConsultorioModal = ({ setShowModal }) => {
 	}
 
 	const CrearNuevoProducto = async () => {
+		console.log(values)
 		try {
-			const {data} = await axios.post(
-				`${config.baseUrl}/api/inventario`,
-				values
-			)
+			const {} = await axios.post(
+				`${config.baseUrl}/api/productos`,
+				values)
+			setShowModal(false)
+			toast.success('producto creado  correctamente')
 		} catch (error) {
 			console.log(error)
-			toast.success('Se agrego nuevo producto')
+			toast.error('error al agregar producto')
 		}
 		
 	}
@@ -81,18 +83,16 @@ export const ConsultorioModal = ({ setShowModal }) => {
 				<div className='datos'><label>DATOS DEL PRODUCTO</label></div>
                     <div className='b'>
 					<input 
-					type="text"
-					name='nomproducto'
-					value={values.nomproducto}
+					name='producto'
+					value={values.producto}
 					onChange={handleChanges}
 					placeholder="Nombre del producto" />
 					</div>
 					<div className='b'>
                     <input 
-					type="text"
-					name='desproducto'
-					value={values.desproducto}
-					onChange={handleChanges} 
+					name='descripcion'
+					value={values.descripcion}
+					onChange={handleChanges}
 					placeholder="Descripcion del Producto" />
                     </div>
 					<div className='b'>

@@ -233,7 +233,8 @@ const App: React.FC = () => (
           component={Mas}
         />
 
-<<<<<<< HEAD
+
+
 <PrivateRoute
           exact
           path="/inventario"
@@ -255,10 +256,10 @@ const App: React.FC = () => (
         />
         
         
-=======
 
 
->>>>>>> cc3cfbef91c02a01e43a55749bd092a9339e18b1
+
+
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
