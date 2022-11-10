@@ -9,6 +9,7 @@ import { ExploracionCabezaCuello } from './ExploracionCabezaCuello';
 import { FichaIndentificacion } from './FichaIndentificacion';
 import './HistoriaClinica.css'
 import { InterrogatorioAparatosSistemas } from './InterrogatorioAparatosSistemas';
+import { RutaClinica } from './RutaClinica';
 
 export const Slides = () => {
 
@@ -45,6 +46,9 @@ export const Slides = () => {
                 </IonSlide>
                 <IonSlide>
                     <InterrogatorioAparatosSistemas />
+                </IonSlide>
+                <IonSlide>
+                    <RutaClinica />
                 </IonSlide>
             </IonSlides>
         </Layout>

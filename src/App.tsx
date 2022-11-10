@@ -56,6 +56,7 @@ import { MisEstudios } from './pages/MisEstudios';
 
 
 import { checkmarkOutline } from 'ionicons/icons';
+import { RutaClinica } from './pages/RutaClinica';
 
 
 
@@ -128,6 +129,11 @@ const App: React.FC = () => (
           component={MisEstudios}
         />
 
+         <PrivateRoute
+          exact
+          path="/RutaClinica"
+          component={RutaClinica}
+        />
 
         <PrivateRoute
           exact
