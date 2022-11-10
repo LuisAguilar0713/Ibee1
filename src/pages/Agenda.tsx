@@ -1,3 +1,5 @@
+
+
 import { IonContent, IonDatetime, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import consultorio from './../assets/img/consultorioAzul.svg'
@@ -219,6 +221,3 @@ const Agenda: React.FC = () => {
 
 export default Agenda;
 
-function setShowToast(arg0: boolean) {
-    throw new Error('Function not implemented.');
-}
