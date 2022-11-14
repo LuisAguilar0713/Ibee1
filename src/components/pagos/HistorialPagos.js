@@ -45,7 +45,7 @@ export const HistorialPagos = ({ historial,setShowModal, getHistorialPagos }) =>
             let total = 0;
             let abono = 0;
             pagos.forEach( pago =>{
-                total += pago.costo * pago.abono
+                total +=                       pago.costo * pago.abono
                 abono += pago.abono
             })
             console.log({

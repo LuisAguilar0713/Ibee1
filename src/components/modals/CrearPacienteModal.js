@@ -302,6 +302,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					onChange={handleChanges}
 					placeholder="CP" />
                     </div>
+					
 					</div>
 				<IonButton onClick={crear}>Crear</IonButton>
 			</form>

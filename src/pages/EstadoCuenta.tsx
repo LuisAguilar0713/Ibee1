@@ -22,7 +22,7 @@ export const EstadoCuenta = () => {
                                 <div>
                                     <img src={iconMoneda} alt="" />
                                     <p>$5,000</p>
-                                    <p><a href="/btnpagar">Total a pagar</a></p>
+                                    <p><a href="/CheckoutPaylpalButton">Total a pagar</a></p>
                                 </div>
                             </div>
                             <div className="slogan">
