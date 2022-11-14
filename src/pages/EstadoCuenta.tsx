@@ -38,7 +38,7 @@ export const EstadoCuenta = () => {
                             </div>
                             
                             <div className="bloque">
-                                <a href="" className="contenidoBloque">
+                                <a href="/CrearFacturaModal" className="contenidoBloque">
                                     <img src={iconSaldo} alt="" />
                                     <p>Saldo Total</p>
                                     <img src={iconArrow} alt="" />

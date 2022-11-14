@@ -50,14 +50,28 @@ import { CalendarioSemana } from './pages/CelndarioSemana';
 import { Toaster } from 'react-hot-toast'
 import { PrivateRoute } from './routes/PrivateRoute';
 import { Mas } from './pages/Mas';
+//Agg para pag de Inventario
+import { inventario } from './pages/inventario';
+//import { entradas } from './pages/inventario';
+//Simport { esterelizado } from './pages/inventario';
+import { Consultorio } from './pages/Consultorio'; //manda a traer pag consultorio
+import { esterelizado } from './pages/Esterelizado'; //manda a traer pag esterelizado
+//import { bodega } from './pages/Bodega'; //manda a a traer pag bodega
+//import { sistemas } from './pages/Sistemas';
 
 import { MisTratamientos } from './pages/MisTratamientos';
 import { MisEstudios } from './pages/MisEstudios';
 
 
 import { checkmarkOutline } from 'ionicons/icons';
+<<<<<<< HEAD
 import CheckoutPaylpalButton from './pages/CheckoutPaylpalButton';
 import { CrearFacturaModal } from './pages/CrearFacturaModal';
+=======
+import { RutaClinica } from './pages/RutaClinica';
+
+
+>>>>>>> 786b193ab4f04b23a7e5b438fb6e1b2d79a5aded
 
 const App: React.FC = () => (
   <IonApp>
@@ -128,6 +142,11 @@ const App: React.FC = () => (
           component={MisEstudios}
         />
 
+         <PrivateRoute
+          exact
+          path="/RutaClinica"
+          component={RutaClinica}
+        />
 
         <PrivateRoute
           exact
@@ -236,6 +255,31 @@ const App: React.FC = () => (
           path="/CrearFacturaModal"
           component={CrearFacturaModal}
         />
+
+
+<PrivateRoute
+          exact
+          path="/inventario"
+          component={inventario} //ventana inventario
+
+        />
+
+<PrivateRoute
+          exact
+          path="/consultorio"
+          component={Consultorio} //ventana consultorio
+
+        />
+<PrivateRoute
+          exact
+          path="/esterelizado"
+          component={esterelizado} //ventana esterelizado
+
+        />
+        
+        
+
+
 
 
       </IonRouterOutlet>
