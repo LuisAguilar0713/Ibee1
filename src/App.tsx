@@ -64,14 +64,9 @@ import { MisEstudios } from './pages/MisEstudios';
 
 
 import { checkmarkOutline } from 'ionicons/icons';
-<<<<<<< HEAD
 import CheckoutPaylpalButton from './pages/CheckoutPaylpalButton';
 import { CrearFacturaModal } from './pages/CrearFacturaModal';
-=======
 import { RutaClinica } from './pages/RutaClinica';
-
-
->>>>>>> 786b193ab4f04b23a7e5b438fb6e1b2d79a5aded
 
 const App: React.FC = () => (
   <IonApp>
