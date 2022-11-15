@@ -1,5 +1,56 @@
+<<<<<<< HEAD
+.conEstudios{
+    text-align: center;
+    color: var(--azulFuerte);
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100% - 5.2rem);
+}
+
+.arrow{
+margin-bottom: 600px;
+margin-left: 30px;
+font-weight: bolder;
+color: var(--azulFuerte);
+}
+.conEstudios h1{
+text-align: center;
+color: var(--azulFuerte);
+font-weight: bold;
+}
+table{
+width: 42%;
+margin: 0 auto;
+height: calc(21% - 5.2rem);
+}
+.conEstudios button{
+margin-left: 53%;
+width: 40px;
+height: 40px;
+background-color: #23a6d5;
+border-radius: 5px;
+color: white;
+font-weight: bolder;
+font-size: 15px;
+}
+.conEstudios input {
+border: none;
+width: 94%;
+border-bottom: solid 3px var(--azulClaro);
+background-color:  #f4f5f8;
+color: var(--negroOpaco);
+}
+
+.conEstudios tr{
+padding: 10px 0 0 10px;
+margin: 0;
+color: teal;
+
+}
+=======
 .conEstudios{
     text-align: center;
     color: var(--azulFuerte);
     font-weight: bold;
 }
+>>>>>>> 8fc3667def120dc68c1402f4d13fed99f9f4e22b

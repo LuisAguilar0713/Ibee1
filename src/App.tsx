@@ -35,7 +35,7 @@ import { Citas } from './pages/Citas';
 import { CustomAgenda } from './components/customAgenda/CustomAgenda';
 import { Agendax } from './pages/Agendax';
 import { Semanas } from './pages/Semanas';
-import { Laboratorio }from './pages/Laboratorio';
+import { Laboratorio } from './pages/Laboratorio';
 import { HistoriaClinica } from './pages/HistoriaClinica';
 import { FichaIndentificacion } from './pages/FichaIndentificacion';
 import { AntecedentesPatologicos } from './pages/AntecedentesPatologicos';
@@ -64,8 +64,14 @@ import { MisEstudios } from './pages/MisEstudios';
 
 
 import { checkmarkOutline } from 'ionicons/icons';
+<<<<<<< HEAD
+import CheckoutPaylpalButton from './pages/CheckoutPaylpalButton';
+import { CrearFacturaModal } from './pages/CrearFacturaModal';
+=======
+import { RutaClinica } from './pages/RutaClinica';
 
 
+>>>>>>> 786b193ab4f04b23a7e5b438fb6e1b2d79a5aded
 
 const App: React.FC = () => (
   <IonApp>
@@ -124,18 +130,23 @@ const App: React.FC = () => (
           path="/paciente/:id"
           component={Paciente}
         />
-        
+
         <PrivateRoute
           exact
           path="/MisTratamientos/:pacienteId"
           component={MisTratamientos}
         />
-         <PrivateRoute
+        <PrivateRoute
           exact
           path="/MisEstudios"
           component={MisEstudios}
         />
 
+         <PrivateRoute
+          exact
+          path="/RutaClinica"
+          component={RutaClinica}
+        />
 
         <PrivateRoute
           exact
@@ -154,7 +165,7 @@ const App: React.FC = () => (
           path="/estadocuenta"
           component={EstadoCuenta}
         />
-        
+
         <PrivateRoute
           exact
           path="/Laboratorio"
@@ -233,6 +244,17 @@ const App: React.FC = () => (
           component={Mas}
         />
 
+         <PrivateRoute
+          exact
+          path="/CheckoutPaylpalButton"
+          component={CheckoutPaylpalButton}
+        />
+
+         <PrivateRoute
+          exact
+          path="/CrearFacturaModal"
+          component={CrearFacturaModal}
+        />
 
 
 <PrivateRoute

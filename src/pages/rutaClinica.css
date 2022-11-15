@@ -1,0 +1,45 @@
+.conRuta{
+        width: 90%;
+        margin: 0 auto;
+        height: calc(100% - 5.2rem);
+}
+.arrow{
+    margin-bottom: 600px;
+    margin-left: 30px;
+    font-weight: bolder;
+    color: var(--azulFuerte);
+}
+.conRuta h1{
+    text-align: center;
+    color: var(--azulFuerte);
+    font-weight: bold;
+}
+table{
+    width: 42%;
+    margin: 0 auto;
+    height: calc(21% - 5.2rem);
+}
+.conRuta button{
+    margin-left: 53%;
+    width: 40px;
+    height: 40px;
+    background-color: #23a6d5;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.conRuta input {
+    border: none;
+    width: 94%;
+    border-bottom: solid 3px var(--azulClaro);
+    background-color:  #f4f5f8;
+    color: var(--negroOpaco);
+}
+
+.conRuta tr{
+    padding: 10px 0 0 10px;
+    margin: 0;
+    color: teal;
+    
+}
