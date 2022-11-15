@@ -79,7 +79,7 @@ export const Pagos = () => {
                     <div className="imagen">
                         <img src={`${config.baseUrlImagenes}/${paciente.url}`} alt="paciente" />
                     </div>
-
+ 
                     <div className="datos">
 
                         <p className="nombre"><label><b>Nombre:</b></label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
@@ -88,9 +88,7 @@ export const Pagos = () => {
                         <p><label><b>Direccion:</b></label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
                         <p><label><b>Telefono:</b></label><label>{paciente.telefono}</label></p>
                         <p><label><b>Whatsapp: </b></label><label>{paciente.Whatsapp}</label></p>
-                        <p><label><b>Tutor:</b></label><label>{paciente.tutor?.nombre}</label></p>
-
-
+                        
                     </div>
                 </div>
 
@@ -128,6 +126,7 @@ export const Pagos = () => {
                         ))
                     }
                 </div>
+
 
                 <IonModal isOpen={showModal} cssClass='my-custom-class'>
                     <IonGrid>

@@ -127,7 +127,7 @@ const App: React.FC = () => (
         
         <PrivateRoute
           exact
-          path="/MisTratamientos"
+          path="/MisTratamientos/:pacienteId"
           component={MisTratamientos}
         />
          <PrivateRoute

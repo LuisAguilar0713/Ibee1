@@ -73,7 +73,7 @@ const Paciente: React.FC = () => {
 
                                     
                                 </p>
-                                <a href="/MisTratamientos">
+                                <a href={`/MisTratamientos/${params.id}`}>
                                     <div><img src={iconTratamiento} alt="" />
                                         <p>Mis Tratamientos</p></div>
                                     <img className="flecha" src={iconArrow} alt="" />

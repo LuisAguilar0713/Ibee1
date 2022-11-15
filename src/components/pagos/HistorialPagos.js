@@ -60,7 +60,7 @@ export const HistorialPagos = ({ historial,setShowModal, getHistorialPagos }) =>
         <>
             <div className="tabla">
                 <p>Tratamiento Fecha Inicio: {new Date(historial.fecha_inicio).toLocaleDateString()}</p>
-                <p>{historial.titulo}</p>
+              <p>{historial.titulo}</p>
                 <table>
                     <thead>
                         <tr>
