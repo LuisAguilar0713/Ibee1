@@ -1,0 +1,18 @@
+ input{
+    border: none;
+    border-bottom: solid 3px var(--azulFuerte);
+    background-color:  #f4f5f8;
+    color: var(--negroOpaco);
+    height: 30px;
+    width: 95%;
+    margin: 21px 12px;
+    border-radius: 5px;
+}
+.btn{
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    color: aliceblue;
+    border: solid 2px rgb(0, 153, 255);
+    background-image: -webkit-linear-gradient(top, #0979b6, #095579);
+}

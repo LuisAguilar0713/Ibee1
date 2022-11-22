@@ -1,19 +1,38 @@
-<<<<<<< HEAD
+
 import React from 'react'
 import { Layout } from '../components/layout/Layout'
 import './MisEstudios.css'
 import { useParams } from 'react-router'
 import {ArrowLeftIcon} from '@primer/octicons-react';
+import { IonButton, IonModal } from '@ionic/react';
+import { useEffect, useState } from 'react';
+import { ListaEstudios } from '../components/modals/ListaEstudios';
+
 
 export const MisEstudios = () => {
     const params: any = useParams();
     const pacienteId  = params.pacienteId
+    const[showModal,setShowModal]=useState(false)
+    
     return (
         <Layout>
-             <a href={`/Paciente/${pacienteId}`} className= "arrow"><ArrowLeftIcon size={40} /></a> 
-        <div className='conEstudios'>
+             <a href={`/HistoriaClinica/${pacienteId}`} className="arrows"><ArrowLeftIcon size={40} /></a>
+        <div className='conRuta'>
+        <IonModal
+					isOpen={showModal}
+					cssClass="my-custom-class"
+					swipeToClose={true}
+					animated
+					onDidDismiss={() => {
+						setShowModal(false)
+					}}
+				>
+					<ListaEstudios 
+            setShowModal={setShowModal}
+          />
+				</IonModal>
         <h1>Mis Estudios</h1>
-        <button> + </button>
+        <button onClick={ ()=> setShowModal(true) }>+</button>
                 <table>
                     <thead>
                         <tr>
@@ -22,39 +41,9 @@ export const MisEstudios = () => {
                             
                         </tr>
                     </thead>
-                    <tr>
-                        <td>
-                            <input type="date">
-
-                            </input>
-                        </td>
-                        <td>
-                            <input type="text">
-
-                            </input>
-                        </td>
-                    </tr>
                 </table>
         </div>
-        </Layout>
-    )
-=======
-import React from 'react'
-import { Layout } from '../components/layout/Layout'
-import './MisEstudios.css'
-import { useParams } from 'react-router'
-import {ArrowLeftIcon} from '@primer/octicons-react';
 
-export const MisEstudios = () => {
-    const params: any = useParams();
-    const pacienteId  = params.pacienteId
-    return (
-        <Layout>
-             <a href={`/Paciente/${pacienteId}`} className= "arrow"><ArrowLeftIcon size={40} /></a> 
-        <div className='conEstudios'>
-        <h1>Mis Estudios</h1>
-        </div>
         </Layout>
     )
->>>>>>> 8fc3667def120dc68c1402f4d13fed99f9f4e22b
 }

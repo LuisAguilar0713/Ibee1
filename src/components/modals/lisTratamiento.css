@@ -1,0 +1,30 @@
+.contenList{
+    text-align: center;
+    color: var(--azulFuerte);
+    width: 90%;
+    margin: 0 auto;
+    height: calc(20% - 5.2rem);
+}
+.contenList h1{
+text-align: center;
+color: var(--azulFuerte);
+font-weight: bold;
+}
+.contenList form input {
+border: none;
+width: 55%;
+border-bottom: solid 3px var(--azulFuerte);
+background-color:  #f4f5f8;
+color: var(--negroOpaco);
+margin: 38px 135px;
+height: 38px;
+
+border-radius: 8px;
+}
+.contenList form .buttonT button{
+    border-bottom: solid 3px var(--azulFuerte);
+    background-color:  #f4f5f8;
+    color: var(--negroOpaco);
+    margin: auto;
+}
+

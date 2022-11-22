@@ -54,6 +54,7 @@
 .contenedorPacientesPrincipal .contenido form button{
     width: 100%;
     height: 100%;
+    border: none;
 }
 
 .contenedorPacientesPrincipal .contenido form button img{

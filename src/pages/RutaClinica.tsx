@@ -3,18 +3,35 @@ import { Layout } from '../components/layout/Layout'
 import './rutaClinica.css'
 import { useParams } from 'react-router'
 import {ArrowLeftIcon} from '@primer/octicons-react';
-import { IonButton } from '@ionic/react';
+import { IonButton, IonModal } from '@ionic/react';
+import { useEffect, useState } from 'react';
+import { ListaTratamientos } from '../components/modals/ListaTratamientos';
 
 
 export const RutaClinica = () => {
     const params: any = useParams();
     const pacienteId  = params.pacienteId
+    const[showModal,setShowModal]=useState(false)
+    
     return (
         <>
              <a href={`/HistoriaClinica/${pacienteId}`} className="arrows"><ArrowLeftIcon size={40} /></a>
         <div className='conRuta'>
+        <IonModal
+					isOpen={showModal}
+					cssClass="my-custom-class"
+					swipeToClose={true}
+					animated
+					onDidDismiss={() => {
+						setShowModal(false)
+					}}
+				>
+					<ListaTratamientos 
+            setShowModal={setShowModal}
+          />
+				</IonModal>
         <h1>Ruta Clinica</h1>
-        <button>+</button>
+        <button onClick={ ()=> setShowModal(true) }>+</button>
                 <table>
                     <thead>
                         <tr>
@@ -24,23 +41,6 @@ export const RutaClinica = () => {
                             
                         </tr>
                     </thead>
-                    <tr>
-                        <td>
-                            <input type="date">
-
-                            </input>
-                        </td>
-                        <td>
-                            <input type="text">
-
-                            </input>
-                        </td>
-                        <td>
-                            <input type="text">
-
-                            </input>
-                        </td>
-                    </tr>
                 </table>
         </div>
 

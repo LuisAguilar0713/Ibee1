@@ -57,6 +57,7 @@
 }
 .contenedorExploracionCabezaCuello form .bloque div input{
     margin-right: 10px;
+    height: 20px;
 }
 .contenedorExploracionCabezaCuello form .bloque button{
     background-color: var(--azulClaro);

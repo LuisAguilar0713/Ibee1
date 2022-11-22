@@ -5,12 +5,13 @@
     text-transform: capitalize;
 }
 
-input {
+.panatalla input {
     background-color: white;
 }
 
-button {
+.pantalla button {
     background-color: white;
+    border: none;
 }
 
 .headerPacientes {
@@ -202,7 +203,7 @@ padding-left: 10px!important;
     }
     50% {
         background-position: 100% 50%;
-    }
+    
     100% {
         background-position: 0% 50%;
     }
