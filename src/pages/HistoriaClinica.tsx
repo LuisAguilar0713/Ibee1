@@ -66,20 +66,21 @@ export const HistoriaClinica = () => {
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/9`}>
+                    <a href={`/historiaclinica/${pacienteId}`}>
                         <div>
                             <img src={odonto} alt="" />
                             <p>Odontograma Diagnóstico</p>
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/4`}>
+                    <a href={`/historiaclinica/${pacienteId}`}>
                         <div>
                             <img src={plan} alt="" />
                             <p>Plan de Tratamiento</p>
                         </div>
                             <img src={flecha} alt="" />
                     </a>
+
                     <a href={`/historiaclinica/${pacienteId}/6`}>
                         <div>
                             <img src={ruta} alt="" />
@@ -87,21 +88,21 @@ export const HistoriaClinica = () => {
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/6`}>
+                    <a href={`/historiaclinica/${pacienteId}`}>
                         <div>
                             <img src={odontoEvo} alt="" />
                             <p>Odontograma de evolución</p>
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/7`}>
+                    <a href={`/historiaclinica/${pacienteId}`}>
                         <div>
                             <img src={trata} alt="" />
                             <p>Tratamientos Realizados</p>
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/8`}>
+                    <a href={`/historiaclinica/${pacienteId}/5`}>
                         <div>
                             <img src={ficha} alt="" />
                             <p>Interrogatorio por Aparatos y Sistemas</p>

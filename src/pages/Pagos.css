@@ -156,12 +156,12 @@ form::-webkit-scrollbar-thumb {
     overflow-y: scroll;
     border-radius: 17px;
 }
-.contenedorPagos input{
+ input{
     outline: none;
     padding: 12px;
     border-radius: 10px;
 }
-.contenedorPagos input:hover{
+ input:hover{
     color: #070707;
     background-color: var(--azulClaro);
 }

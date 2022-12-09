@@ -1,44 +1,74 @@
-
-.conTratamientos h1{
-    text-align: center;
-    color: var(--azulFuerte);
-    font-weight: bold;
+.pageConten{
+    overflow-y: scroll;
 }
-.conTratamientos{
-    width: 90%;
-    margin: 0 auto;
-    height: calc(100% - 5.2rem);
+.pageConten::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 5px;
 }
-.arrow{
-margin-bottom: 600px;
-margin-left: 30px;
-font-weight: bolder;
-color: var(--azulFuerte);
+.pageConten::-webkit-scrollbar-thumb {
+    background: rgb(225,254,255);
+    background: linear-gradient(180deg, rgba(225,254,255,1) 0%, var(--azulFuerte) 54%, rgba(225,254,255,1) 100%);
+    border-radius: 5px;
+    
 }
-table{
-width: 42%;
-margin: 0 auto;
-height: calc(21% - 5.2rem);
-}
-.conTratamientos input {
-border: none;
-width: 94%;
-border-bottom: solid 3px var(--azulClaro);
-background-color:  #f4f5f8;
-color: var(--negroOpaco);
-}
-
-.conTratamientos tr{
-padding: 10px 0 0 10px;
-margin: 0;
-color: teal;
-
-}
-
-.conTratamientos h1{
+.conRuta h1{
     text-align: center;
     color: var(--azulFuerte);
     font-weight: bold;
 }
 
+.masbtn{
+    margin-left: 53%;
+    width: 40px;
+    height: 40px;
+    background-color: #23a6d5;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
 
+.ioncont{
+    width: 36%;
+    height: 10%;
+    margin: 20px 2px;
+    
+   
+}
+.ioncard{
+    width: 40%;
+    height: 30%;
+}
+.contenCar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 25px 360px;
+    background: linear-gradient(341deg, #23a6d5, transparent);
+    border-radius: 6px;
+    text-align: center;
+}
+@media only screen and (min-width: 279px)and(max-width: 360px) {
+    .pageConten{
+        overflow-y: scroll;
+        left: 0;
+        width: 3% ;
+    }
+    .contenCar{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 25px 360px;
+    background: linear-gradient(341deg, #23a6d5, transparent);
+    border-radius: 6px;
+    text-align: center;
+}
+}

@@ -45,7 +45,7 @@ export const HistorialPagos = ({ historial,setShowModal, getHistorialPagos }) =>
             let total = 0;
             let abono = 0;
             pagos.forEach( pago =>{
-                total += pago.costo * pago.abono
+                total +=                       pago.costo * pago.abono
                 abono += pago.abono
             })
             console.log({
@@ -60,7 +60,7 @@ export const HistorialPagos = ({ historial,setShowModal, getHistorialPagos }) =>
         <>
             <div className="tabla">
                 <p>Tratamiento Fecha Inicio: {new Date(historial.fecha_inicio).toLocaleDateString()}</p>
-                <p>{historial.titulo}</p>
+              <p>{historial.titulo}</p>
                 <table>
                     <thead>
                         <tr>

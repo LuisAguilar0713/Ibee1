@@ -1,3 +1,4 @@
+
 import { IonButton } from '@ionic/react'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
@@ -309,3 +310,4 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 		</>
 	)
 }
+

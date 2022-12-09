@@ -35,7 +35,7 @@ import { Citas } from './pages/Citas';
 import { CustomAgenda } from './components/customAgenda/CustomAgenda';
 import { Agendax } from './pages/Agendax';
 import { Semanas } from './pages/Semanas';
-import { Laboratorio }from './pages/Laboratorio';
+import { Laboratorio } from './pages/Laboratorio';
 import { HistoriaClinica } from './pages/HistoriaClinica';
 import { FichaIndentificacion } from './pages/FichaIndentificacion';
 import { AntecedentesPatologicos } from './pages/AntecedentesPatologicos';
@@ -62,10 +62,10 @@ import { esterelizado } from './pages/Esterelizado'; //manda a traer pag esterel
 import { MisTratamientos } from './pages/MisTratamientos';
 import { MisEstudios } from './pages/MisEstudios';
 
-
 import { checkmarkOutline } from 'ionicons/icons';
+import CheckoutPaylpalButton from './pages/CheckoutPaylpalButton';
+import { CrearFacturaModal } from './pages/CrearFacturaModal';
 import { RutaClinica } from './pages/RutaClinica';
-
 
 
 const App: React.FC = () => (
@@ -125,13 +125,14 @@ const App: React.FC = () => (
           path="/paciente/:id"
           component={Paciente}
         />
-        
+
         <PrivateRoute
           exact
           path="/MisTratamientos/:pacienteId"
           component={MisTratamientos}
         />
-         <PrivateRoute
+      
+        <PrivateRoute
           exact
           path="/MisEstudios/:pacienteId"
           component={MisEstudios}
@@ -139,7 +140,7 @@ const App: React.FC = () => (
 
          <PrivateRoute
           exact
-          path="/RutaClinica"
+          path="/RutaClinica/:pacienteId"
           component={RutaClinica}
         />
 
@@ -160,7 +161,7 @@ const App: React.FC = () => (
           path="/estadocuenta"
           component={EstadoCuenta}
         />
-        
+
         <PrivateRoute
           exact
           path="/Laboratorio"
@@ -239,6 +240,17 @@ const App: React.FC = () => (
           component={Mas}
         />
 
+         <PrivateRoute
+          exact
+          path="/CheckoutPaylpalButton"
+          component={CheckoutPaylpalButton}
+        />
+
+         <PrivateRoute
+          exact
+          path="/CrearFacturaModal"
+          component={CrearFacturaModal}
+        />
 
 
 <PrivateRoute
@@ -260,11 +272,6 @@ const App: React.FC = () => (
           component={esterelizado} //ventana esterelizado
 
         />
-        
-        
-
-
-
 
       </IonRouterOutlet>
     </IonReactRouter>

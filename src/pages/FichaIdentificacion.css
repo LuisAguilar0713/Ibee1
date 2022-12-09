@@ -99,7 +99,6 @@
     border: none;
     border-radius: 7px;
     background-color: var(--azulClaro);
-    color: var(--negroOpaco);
 }
 .contenedorFicha form .edadGenero{
     display: flex;

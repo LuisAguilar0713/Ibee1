@@ -54,4 +54,6 @@ export const Slides = () => {
             </IonSlides>
         </Layout>
     )
+
 }
+

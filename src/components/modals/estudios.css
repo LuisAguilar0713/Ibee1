@@ -1,8 +1,7 @@
- input{
+ .esim input{
     border: none;
     border-bottom: solid 3px var(--azulFuerte);
     background-color:  #f4f5f8;
-    color: var(--negroOpaco);
     height: 30px;
     width: 95%;
     margin: 21px 12px;

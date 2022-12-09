@@ -1,6 +1,6 @@
 
 
-import { IonContent, IonDatetime, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonDatetime, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import consultorio from './../assets/img/consultorioAzul.svg'
 import './Agenda.css'
@@ -31,10 +31,7 @@ const Agenda: React.FC = () => {
     const [showModal, setShowModal] = useState(true)
     const [precioDolar, setPrecioDolar] = useState<any>(null)
     const [values, setValues] = useState({
-        nom_consultorio:'consultorio',
-        nombre_c:'',
-        ap_paterno:'',
-        ap_materno:'', 
+        nom_consultorio:'consultorio'
     
     });
 
@@ -60,7 +57,7 @@ const Agenda: React.FC = () => {
         var f = new Date(mes + ' ' + dia + ' ' + año);
         return diasSemana[f.getDay()];
     }
-    const citas = () => {
+    const  citas = () => {
         let text;
         if (numeroCitas == 0) {
             text = 'Sin citas para el dia de hoy';
@@ -74,7 +71,7 @@ const Agenda: React.FC = () => {
     useEffect(() => {
         getNumeroCitas()
         getClima()
-        getPrecioDolar()
+        //getPrecioDolar()
     }, [fecha])
     // ejecuta funciones cuando se recarga la pagina o se entra
     useEffect(() => {
@@ -91,16 +88,18 @@ const Agenda: React.FC = () => {
     const crear = async () => {
 
 		try {
-			const {data} = await axios.post(
+			const {} = await axios.post(
 				`${config.baseUrl}/api/agenda`,
 				values
 			)
+            console.log('se agrego    ')
 		} catch (error) {
 			console.log(error)
-			toast.success('Se agrego nuevo consultorio')
+			toast.error('error')
 		}
-	}
-
+	
+    }
+/*
     const getPrecioDolar = async() =>{
         try {
             const {data} = await axios.get(`https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF63528/datos/2021-12-28/2021-12-28?token=${config.banxicoApiToken}&mediaType=json`)
@@ -108,7 +107,7 @@ const Agenda: React.FC = () => {
         } catch (error) {
             console.log(error);
         }
-    }
+    }*/
     return (
         
         <IonPage>
@@ -119,7 +118,7 @@ const Agenda: React.FC = () => {
                         <div className="contenido">
                             <div className="head">
                                 <h1>Mi Agenda</h1>
-                                <a  className="agregar" onClick={crear} href="/agenda">
+                                <a  className="agregar" onClick={crear} >
                                     <button >
                                         <img src={plus} alt="" />
                                     </button>
@@ -129,7 +128,7 @@ const Agenda: React.FC = () => {
                             <div className='citas_dia'>
                             <ul className='cit'>
 
-                              <li className='trianguloA'> <a><TriangleLeftIcon size={30} /></a>
+                              <li className='trianguloA'> <IonButton><TriangleLeftIcon size={30} /></IonButton>
 
                                 <ul className='concit'>
 
@@ -146,7 +145,6 @@ const Agenda: React.FC = () => {
                                     </li>
                                 </ul>
                              </li>
-
                             </ul>
                             </div>
                             <div className="informe">
@@ -196,7 +194,7 @@ const Agenda: React.FC = () => {
                                         <a href={`/calendarioSemana/${c.id_consultorio}`}>
                                             <div className="consultorio">
                                                 <img src={consultorio} alt="" />
-                                                <p>Consultorio {c.id_consultorio}</p>
+                                                <p>{c.nombre}</p>
                                                 <div className="contador">
                                                     {c.nCitas}
                                                 </div>

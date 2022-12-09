@@ -386,32 +386,5 @@ ul, li{
         align-items: center;
         left: 280px;
     }
-    .cit li:hover >ul{
-        display: block;
-        right: 5px;
-      }
-      .cit li a{
-        background-color: transparent;
-        color:var(--azulFuerte);
-        text-decoration: none;
-        margin-left: 300px;
-        display: flex;
-        justify-content: start;
-      }
-      .concit{
-        padding: 0px;
-        z-index: 301;
-        border-radius: 7px;
-        padding-top: 20px;
-        width: 465px;
-        padding-right: 13px;
-        background-color: var(--azulMedio);
-        box-shadow: 4px 4px 11px 0px rgb(0 0 0 / 47%);
-      }
-      .cit li ul {
-        display: none;
-        position: absolute;
-        min-height: 120px;
-        background: var(--azulMedio);
-    }
+   
 }

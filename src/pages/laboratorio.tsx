@@ -7,8 +7,8 @@ import plus from './../assets/img/plus-circle.svg'
 import { useHistory } from 'react-router'
 import './PacientesPrincipal.css'
 import { IonButton, IonModal } from '@ionic/react'
-import { RegistroOrdenTrabajo } from '../components/modals/RegistroOrdenTrabajo'
-import { agregarPacienteAlHistorial } from '../utils/agregarPacienteAlHistorial'
+import { RegistroOrdenTrabajo } from '../components/modals/RegistroOrdenTrabajo'	
+import { ListaOrdenTrabajo } from '../components/ordenTrabajo/listaOrdenTrabajo'
 
 export const Laboratorio = () => {
 	// gets pacientes from localstorage
@@ -16,43 +16,27 @@ export const Laboratorio = () => {
 	const pacientesHistorial = PacientesStorage
 		? JSON.parse(PacientesStorage)
 		: []
-	const [Pacientes, setPacientes] = useState(pacientesHistorial)
-	const [termino, setTermino] = useState('')
-	const [mostrarBoton, setmostrarBoton] = useState(false)
+	const [orden, setOrden] = useState(pacientesHistorial)
 	const [showModal, setShowModal] = useState(false)
 	const history = useHistory()
 
 	useEffect(() => {
-		buscarPacientes()
+		buscarOrden()
 	}, [])
 
-	const buscarPacientes = () => {
-		fetch(`${config.baseUrl}/api/pacientes/${termino}`, {
+	const buscarOrden = () => {
+		fetch(`${config.baseUrl}/api/ordenes`, {
 			method: 'GET',
 			redirect: 'follow',
 		})
 			.then((response) => response.json())
 			.then(({ results }) => {
 				console.log(results)
-				setPacientes(results)
+				setOrden(results)
 			})
 			.catch((error) => console.log('error', error))
 	}
 
-	const buscar = (e: any) => {
-		e.preventDefault()
-		buscarPacientes()
-	}
-
-	const mostrar = (e: any) => {
-		e.preventDefault()
-		setmostrarBoton(!mostrarBoton)
-	}
-
-	const handlePacienteClick = (Paciente: any): void => {
-		agregarPacienteAlHistorial( Paciente )
-		history.push(`/paciente/${Paciente.id_paciente}`)
-	}
 
 	return (
 		<Layout>
@@ -84,6 +68,12 @@ export const Laboratorio = () => {
               >+</IonButton>
 						</div>
 					</form>
+					<div className="listPacientesP">
+						<ListaOrdenTrabajo
+							orden={orden}
+							//handleOrdenClick={handlePacienteClick}
+						/>
+					</div>
 				</div>
 			</div>
 		</Layout>
