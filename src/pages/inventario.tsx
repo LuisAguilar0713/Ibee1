@@ -3,10 +3,7 @@ import { IonContent, IonPage } from '@ionic/react';
 import { Layout } from '../components/layout/Layout';
 import './inventario.css'
 import iconArrow from './../assets/img/arrow-derecha.png'
-import iconAbonos from './../assets/img/moneyEC.png'
-import iconInventario from './../assets/img/in.jpg'
 import './inventario.css'
-//import { IonSearchbar } from '@ionic/react';
 export const inventario = () => {
     
     return (

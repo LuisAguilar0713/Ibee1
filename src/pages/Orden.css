@@ -1,0 +1,259 @@
+.form-container-O{
+    overflow-y: scroll;
+    padding: 2rem;
+    text-align: center;
+}
+
+.bloqueCuatro-O{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    gap: 5px;
+}
+.bloqueCuatro-O div{
+    display: flex;
+    justify-content: center;
+    height: 2rem;
+}
+
+.bloqueCuatro-O div label{
+    font-weight: bold;
+}
+.bloqueCuatro-O div .btnRadio{
+    width: 15px;
+}
+
+.form-container-O .a .btnRadio{
+    width: 15px;
+}
+
+.form-container-O .a label{
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.margen-O{
+    margin-left: 10rem;
+}
+
+.amb-O{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    font-weight: 100;
+    font-size: 1rem;
+}
+/*
+.amb-O label{
+    margin: 5px;
+}*/
+
+.contedorOrden p {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 3rem 0.5rem 3rem;
+}
+
+.cont-orden{
+    width: 90%;
+    height: 3.5rem;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 0.5rem 0 0.5rem 0;
+    align-items: center;
+    color: white;
+}
+
+.cont-orden2{
+    background-color: var(--azulFuerte);
+    width: 90%;
+    height: 3.5rem;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 0.5rem 0 0.5rem 0;
+    align-items: center;
+}
+
+
+.contedorOrden .a-O .p{
+font-size: 0.8rem;
+}
+
+.contedorOrden a div p{
+    color: var(--negroOpaco);
+    font-size: 1rem;
+}
+.contedorOrden a img{
+    height: 35%;
+    margin-right: 1rem;
+}
+.contedorOrden a div img{
+    height: auto;
+    width: 2.4rem;
+    margin: auto 20px;
+}
+
+@media only screen and (min-width: 768px){
+    .contedorOrden a{
+        width: 60%
+    }
+}
+
+.contedorOrden a div{
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 7px;
+}
+
+.contedorOrden a:hover{
+    color: white;
+    background-color: var(--azulFuerte);
+}
+.contedorOrden a:hover img{
+    filter: var(--blancoImg);
+}
+.contedorOrden a:hover p{
+    color: white;
+}
+
+.label-O .naranja-O {
+    color: coral;
+    font-weight: bold;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.margen2-O{
+    margin-right: 10rem;
+}
+
+.folioidfolio-O{
+    display: flex;
+    flex-direction: column;
+}
+
+.idFolio-O{
+    height: 2.5rem;
+    width: 4.5rem;
+    border-color: darkorange;
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #d57500;
+}
+
+.folio-O{
+    /*margin-right: 25px;*/ 
+    display: flex;
+    background-color: #d57500;
+    color: white;
+    height: 2rem;
+    width: 4.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logoFolio-O{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bloqueCuatro-O .label-O{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-weight: bold;
+}
+
+.dientes-O{
+    height: 6rem;
+    width: 20rem;
+    /*background-image: url(../../assets/img/Dientes.PNG);*/
+    background-size: cover;
+}
+
+.diente-O{
+    height: 8rem;
+    width: 8rem;
+    /*background-image: url(../../assets/img/Diente.png);*/
+    background-size: cover;
+}
+
+.contedorOrden .check button{
+    width: 3rem;
+    height: 3rem;
+}
+
+.contedorOrden .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoDTD-O {
+    height: 10rem;
+    width: 10rem;
+    /*background-image: url(../../assets/img/Logodtd.jpeg);*/
+    background-size: cover;
+    /*margin: -1rem 9rem auto auto;*/
+}
+
+.a-O button{
+    font-weight: bold;
+    margin-right: 2.5rem;
+}
+
+.form-container-O .text-O {
+    display: block;
+    font-size: 1rem;
+    text-align: start;
+    margin-left: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    width: 35%;
+    color: coral;
+}
+
+.a-O{
+    display: flex; 
+    justify-content: center;
+    align-items: center;    
+}
+
+.a-O2{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.contedorOrden{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5.1rem;
+    height: calc(100% - 5.6rem);
+}
+
+.contedorOrden .img{
+    border-radius: 10%;
+    width: 12rem;
+    height: 12rem;
+    background-color: tomato;
+    margin: 30px auto 0 auto;
+    /* background-image: url("https://dentalesthetics.mx/Ibee/view/pacientes/foto/foto_1459.png"); */
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+}

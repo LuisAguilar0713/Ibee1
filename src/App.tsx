@@ -67,6 +67,7 @@ import { checkmarkOutline } from 'ionicons/icons';
 import CheckoutPaylpalButton from './pages/CheckoutPaylpalButton';
 import { CrearFacturaModal } from './pages/CrearFacturaModal';
 import { RutaClinica } from './pages/RutaClinica';
+import Orden from './pages/Orden';
 
 const App: React.FC = () => (
   <IonApp>
@@ -124,6 +125,12 @@ const App: React.FC = () => (
           exact
           path="/paciente/:id"
           component={Paciente}
+        />
+
+        <PrivateRoute
+          exact
+          path="/orden/:id"
+          component={Orden}
         />
 
         <PrivateRoute

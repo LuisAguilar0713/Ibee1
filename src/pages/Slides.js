@@ -15,7 +15,6 @@ import { RutaClinica } from './RutaClinica';
 export const Slides = () => {
 
     const params = useParams();
-    const history = useHistory();
 
     console.log( params );
     const slideOpts = {

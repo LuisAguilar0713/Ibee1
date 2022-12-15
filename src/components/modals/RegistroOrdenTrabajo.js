@@ -1,8 +1,10 @@
 import { IonButton, IonFabButton } from '@ionic/react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import axios from 'axios'
 import { config, input } from '../../env'
+/*import React from 'react';*/
+import { IonLabel, IonSegment, IonSegmentButton } from '@ionic/react';
 import './RegistroOrdenTrabajo.css'
 
 export const RegistroOrdenTrabajo = ({setShowModal }) => {
@@ -16,24 +18,46 @@ export const RegistroOrdenTrabajo = ({setShowModal }) => {
 		vita:"",
 		chromascop:"",
 		otros:"",
-		u11:false,u12:false,u13:false,u14:false,u15:false,u16:false,u17:false,
-		u21:false,u22:false,u23:false,u24:false,u25:false,u26:false,u27:false,
-		u31:false,u32:false,u33:false,u34:false,u35:false,u36:false,u37:false, 
-		u41:false,u42:false,u43:false,u44:false,u45:false,u46:false,u47:false,
+		u11:"",u12:"",u13:"",u14:"",u15:"",u16:"",u17:"",
+		u21:"",u22:"",u23:"",u24:"",u25:"",u26:"",u27:"",
+		u31:"",u32:"",u33:"",u34:"",u35:"",u36:"",u37:"", 
+		u41:"",u42:"",u43:"",u44:"",u45:"",u46:"",u47:"",
 		mamelones:"",
 		translucidez:"",
 		textura:"",
 		brillo:"",
-		yeso: false,
-		oclusal: false,
-		antagonista: false,
-		foto: false,
-		articulador: false,
-		coronas: false,
-		implante: false,
-		cucharillas: false,
+		yeso: "",
+		oclusal: "",
+		antagonista: "",
+		foto: "",
+		articulador: "",
+		coronas: "",
+		implante: "",
+		cucharillas: "",
 		notas:""
 	})
+
+	useEffect(() => {
+		buscarOrden()
+	}, [])
+	
+	const PacientesStorage = localStorage.getItem('Pacientes')
+	const pacientesHistorial = PacientesStorage
+		? JSON.parse(PacientesStorage)
+		: []
+	const [orden, setOrden] = useState(pacientesHistorial)
+	const buscarOrden = () => {
+		fetch(`${config.baseUrl}/api/ordenes`, {
+			method: 'GET',
+			redirect: 'follow',
+		})
+			.then((response) => response.json())
+			.then(({ results }) => {
+				console.log(results)
+				setOrden(results)
+			})
+			.catch((error) => console.log('error', error))
+	}
 
     const handleChanges = (e) => {
 		const target = e.target
@@ -60,6 +84,17 @@ export const RegistroOrdenTrabajo = ({setShowModal }) => {
 		
 	}
 	
+	const [style, setStyle] = useState("cont")
+	const [style2,setStyle2]=useState("cont")
+	const changeStyle2 = () =>{
+		setStyle("cont")
+		setStyle2("cont2")
+	}
+	const changeStyle = () => {
+		setStyle2("cont")
+		setStyle("cont2")
+	}
+	
 
     return (
 		<>
@@ -70,7 +105,7 @@ export const RegistroOrdenTrabajo = ({setShowModal }) => {
 			<div className="logoDTD"></div>
             <div className='folioidfolio'>
             <div className='folio'>Folio: </div>
-            <div className='idFolio'>1</div>
+            <div className='idFolio'>{orden.id_orden}</div>
             </div>
             </div>
 			<form className="form-container">
@@ -179,11 +214,20 @@ export const RegistroOrdenTrabajo = ({setShowModal }) => {
 					<div className='bloqueCuatro'>
 						<div className='a'>
 						<label className='mamelones'>MAMELONES: </label>
-						<button type='button' onClick={()=> setValues({...values, mamelones:'si'})} >SI</button>
-						<button type='button' onClick={()=> setValues({...values, mamelones:'no'})} >NO</button>
+						
+      
+      <IonSegment  color="secondary" value="mamelones">
+        <div className={style} onClick={changeStyle}><IonSegmentButton  value="si" onClick={()=> setValues({...values, mamelones:'SI'})}> 
+          <IonLabel >SI</IonLabel>
+        </IonSegmentButton></div>
+        <div className={style2} onClick={changeStyle2}><IonSegmentButton value="no" onClick={()=> setValues({...values, mamelones:'NO'})}>
+          <IonLabel>NO</IonLabel>
+        </IonSegmentButton></div>
+      </IonSegment>
+      
 						</div>
 					</div>
-					<div className='label'>
+					
 					<div className='a'><label className='naranja'>TRANSLUCIDEZ: 
 						<div className='a'>
 							<input className='btnRadio' type='radio' value="alta" name='translucidez'onChange={handleChanges}></input>
@@ -222,7 +266,7 @@ export const RegistroOrdenTrabajo = ({setShowModal }) => {
 						<label>BAJA</label>
 					</div>
 						</label></div>
-						</div>
+						
 
 					<div className='a'>
 						<label>MODELO YESO: </label> <input className='btnRadio' type='checkbox' name='yeso' checked={values.yeso} onChange = {handleChanges}></input>
@@ -247,6 +291,8 @@ export const RegistroOrdenTrabajo = ({setShowModal }) => {
 							onChange={handleChanges}
                         />
                     </div>
+					
+				
 				<IonButton onClick={crear}>Crear</IonButton>
 			</form>
 

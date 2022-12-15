@@ -38,7 +38,6 @@
 .form-container .a label{
     color: black;
     font-size: 12px;
-    font-weight: bold;
 }
 
 .margen{
@@ -52,7 +51,7 @@
     margin: -10px 0 1rem 0;
 }
 
-.form-container .label .naranja{
+.form-container .a .naranja{
     color: coral;
    font-weight: bold;
 }
@@ -143,3 +142,13 @@
     justify-content: space-around;
     align-items: center;    
 }
+
+  .cont {
+    
+    background-color: white;
+  }
+  
+  .cont2 {
+    border-radius: 10px;
+    background-color: var(--azulClaro);
+  }

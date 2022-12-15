@@ -1,9 +1,8 @@
 import React from 'react'
-import { Layout } from '../components/layout/Layout'
 import './rutaClinica.css'
 import { useParams } from 'react-router'
 import {ArrowLeftIcon} from '@primer/octicons-react';
-import { IonButton } from '@ionic/react';
+
 
 
 export const RutaClinica = () => {

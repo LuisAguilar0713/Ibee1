@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { Layout } from '../components/layout/Layout'
 import busca from './../assets/img/Lupa.svg'
-import { ListaPacientes } from '../components/pacientes/ListaPacientes'
 import { config } from '../env'
 import plus from './../assets/img/plus-circle.svg'
 import { useHistory } from 'react-router'
-import './PacientesPrincipal.css'
+import './Laboratorio.css'
 import { IonButton, IonModal } from '@ionic/react'
 import { RegistroOrdenTrabajo } from '../components/modals/RegistroOrdenTrabajo'	
 import { ListaOrdenTrabajo } from '../components/ordenTrabajo/listaOrdenTrabajo'
 
 export const Laboratorio = () => {
 	// gets pacientes from localstorage
-	const PacientesStorage = localStorage.getItem('Pacientes')
-	const pacientesHistorial = PacientesStorage
-		? JSON.parse(PacientesStorage)
+	const LaboratorioStorage = localStorage.getItem('Laboratorio')
+	const LaboratorioHistorial = LaboratorioStorage
+		? JSON.parse(LaboratorioStorage)
 		: []
-	const [orden, setOrden] = useState(pacientesHistorial)
+	const [orden, setOrden] = useState(LaboratorioHistorial)
 	const [showModal, setShowModal] = useState(false)
 	const history = useHistory()
 
@@ -37,10 +36,14 @@ export const Laboratorio = () => {
 			.catch((error) => console.log('error', error))
 	}
 
+	const handleOrdenClick = (orden: any): void => {
+		//agregarPacienteAlHistorial( paciente )
+		history.push(`/orden/${orden.id_orden}`)
+	}
 
 	return (
 		<Layout>
-			<div className="contenedorPacientesPrincipal">
+			<div className="contenedorLaboratorio">
 				<IonModal
 					isOpen={showModal}
 					cssClass="my-custom-class"
@@ -68,10 +71,10 @@ export const Laboratorio = () => {
               >+</IonButton>
 						</div>
 					</form>
-					<div className="listPacientesP">
+					<div >
 						<ListaOrdenTrabajo
 							orden={orden}
-							//handleOrdenClick={handlePacienteClick}
+							handleOrdenClick={handleOrdenClick}
 						/>
 					</div>
 				</div>

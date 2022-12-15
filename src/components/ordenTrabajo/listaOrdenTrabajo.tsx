@@ -1,29 +1,34 @@
-import React from 'react';
 import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
-import flecha from './../../assets/img/arrow-derecha.png'
-import userImage from '../../assets/img/woman-gfec6923be_640.jpg';
+import React, { useState } from 'react'
 import './listaOT.css'
-import { config } from '../../env';
 
 export const ListaOrdenTrabajo = ({
   orden = [],
-  handleOrdenClick = (pacienteId: any) => {}
+  
+  handleOrdenClick = (ordenId: any) => {}
+
 }, props: any) => {
+  const [values, setValues] = useState({
+	})
   return (
     <div className="listaPT">
 
       {
         orden.map((orden: any) => (
-          <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>{orden.doctor}</IonCardTitle>
-            <IonCardSubtitle>{orden.fecha}</IonCardSubtitle>
-          </IonCardHeader>
-    
-          <IonCardContent>
-           {orden.paciente}
-          </IonCardContent>
-        </IonCard>
+
+          <><IonCard className="contenidoPaciente">
+            <IonCardHeader className='nombre'>Folio:{orden.id_orden}
+            <IonCardTitle > Doctor: {orden.doctor}</IonCardTitle>
+              <IonCardSubtitle></IonCardSubtitle>
+            </IonCardHeader>
+
+            <IonCardContent className='nombreText'>
+              Paciente: {orden.paciente} <br/>Tipo de trabajo: {orden.tipo_trabajo}
+            </IonCardContent>
+          </IonCard>
+          
+            </> 
+          
     
         ))
       }
