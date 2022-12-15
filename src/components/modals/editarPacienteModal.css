@@ -117,6 +117,7 @@ background-color: red;
     margin-bottom: -7%;
     margin-top: 10px;
     position:relative;
+   background-color: transparent;
 }
 
 .take-image-button{

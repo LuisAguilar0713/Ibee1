@@ -1,6 +1,6 @@
 
 
-import { IonContent, IonDatetime, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonDatetime, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import consultorio from './../assets/img/consultorioAzul.svg'
 import './Agenda.css'
@@ -57,7 +57,7 @@ const Agenda: React.FC = () => {
         var f = new Date(mes + ' ' + dia + ' ' + año);
         return diasSemana[f.getDay()];
     }
-    const citas = () => {
+    const  citas = () => {
         let text;
         if (numeroCitas == 0) {
             text = 'Sin citas para el dia de hoy';
@@ -128,7 +128,7 @@ const Agenda: React.FC = () => {
                             <div className='citas_dia'>
                             <ul className='cit'>
 
-                              <li className='trianguloA'> <a><TriangleLeftIcon size={30} /></a>
+                              <li className='trianguloA'> <IonButton><TriangleLeftIcon size={30} /></IonButton>
 
                                 <ul className='concit'>
 
@@ -145,7 +145,6 @@ const Agenda: React.FC = () => {
                                     </li>
                                 </ul>
                              </li>
-
                             </ul>
                             </div>
                             <div className="informe">

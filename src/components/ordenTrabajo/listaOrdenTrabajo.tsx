@@ -16,7 +16,7 @@ export const ListaOrdenTrabajo = ({
       {
         orden.map((orden: any) => (
 
-          <><IonCard className="contenidoPaciente">
+          <><IonCard className="contenidoPaciente" key={orden.id_orden} onClick={() => handleOrdenClick(orden)}>
             <IonCardHeader className='nombre'>Folio:{orden.id_orden}
             <IonCardTitle > Doctor: {orden.doctor}</IonCardTitle>
               <IonCardSubtitle></IonCardSubtitle>

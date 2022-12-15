@@ -86,7 +86,7 @@ const crear = async () => {
 	
     return (
 		<>
-		<button className="boton-x1" onClick={() => setShowModal(false)}>x</button>
+		<button className="boton-x1" onClick={() => setShowModal(false)}>x</button>  
         
 		<div className='conWrap'>
 

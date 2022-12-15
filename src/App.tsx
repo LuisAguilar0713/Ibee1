@@ -62,12 +62,12 @@ import { esterelizado } from './pages/Esterelizado'; //manda a traer pag esterel
 import { MisTratamientos } from './pages/MisTratamientos';
 import { MisEstudios } from './pages/MisEstudios';
 
-
 import { checkmarkOutline } from 'ionicons/icons';
 import CheckoutPaylpalButton from './pages/CheckoutPaylpalButton';
 import { CrearFacturaModal } from './pages/CrearFacturaModal';
 import { RutaClinica } from './pages/RutaClinica';
 import Orden from './pages/Orden';
+
 
 const App: React.FC = () => (
   <IonApp>
@@ -138,15 +138,16 @@ const App: React.FC = () => (
           path="/MisTratamientos/:pacienteId"
           component={MisTratamientos}
         />
+      
         <PrivateRoute
           exact
-          path="/MisEstudios"
+          path="/MisEstudios/:pacienteId"
           component={MisEstudios}
         />
 
          <PrivateRoute
           exact
-          path="/RutaClinica"
+          path="/RutaClinica/:pacienteId"
           component={RutaClinica}
         />
 
@@ -278,11 +279,6 @@ const App: React.FC = () => (
           component={esterelizado} //ventana esterelizado
 
         />
-        
-        
-
-
-
 
       </IonRouterOutlet>
     </IonReactRouter>

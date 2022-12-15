@@ -152,10 +152,10 @@
     margin-left: 5%;
 }
 
-input{
+.nuevaCita input{
     outline: none;
 }
-input:focus{
+.nuevaCita input:focus{
     border-color: var(--azulMedio);
 }
 @media only screen and (min-width: 768px){
